@@ -1,0 +1,126 @@
+.headroom {
+    z-index: 999 !important;
+}
+.navbarSec {
+    position: relative;
+    height: fit-content;
+    z-index: 999;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.212);
+    background-color: var(bg-body);
+}
+.navbarSec .navContainer{
+    position: relative;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+    z-index: 3;
+    backdrop-filter: var(--main-blur);
+    background-color: var(--bg-glass);
+    border-bottom: 1px solid var(--color-borderLight);
+}
+
+
+.navIcnWrapper{
+    display: flex;
+}
+
+.navbarSec .navProfIcon{
+    padding-inline: 15px;
+    font-size: 20px;
+    transition: var(--transition-main);
+}
+.navIcnWrapper .navProfIcon:nth-child(2){
+    border-inline: 1px solid var(--color-borderLight) ;
+}
+.navbarSec .navProfIcon:hover{
+    color: var(--color-primary);
+}
+.navbarSec .navProfIcon.active{
+    color: var(--color-primary);
+    filter: drop-shadow( 0px 0px 4px );
+}
+
+
+
+
+.navbarSec a{
+    color: var(--font-navColor);
+}
+.navbarSec .logo{
+    display: flex;
+    align-items: center;
+    height: 33px;
+    padding: 0px 14px 0px 14px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    background-color: var(--font-navColor);
+}
+
+
+
+
+/*Search Icon*/
+.navbarSec .icnWrapperSrch{
+    position: relative;
+    width: 33px;
+    height: 33px;
+    border-radius: 5px;
+    background-color: var(--font-navColor);
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+    transition: var(--transition-main);
+}
+
+.navbarSec .icnWrapperSrch svg{
+    position: relative;
+    font-size: 18px;
+}
+.navbarSec .icnWrapperSrch:hover{
+    color: #fff;
+    background-color: var(--color-primary);
+}
+.navbarSec .icnWrapperSrch.active{
+    color: #fff;
+    background-color: var(--color-primary);
+}
+
+
+
+/* @media screen and (max-width: 992px) {
+    .navbarSec .navContainer{
+        padding: 0px 20px;
+    }
+} */
+@media screen and (max-width: 768px) {
+    /*displays*/
+    .navbarSec .icnWrapperSrch{
+        display: none;
+    }
+    
+    
+    .navbarSec .navContainer{
+        height: unset;
+        padding: 12px 20px;
+    }
+    /*LOGO*/
+    .navbarSec .logo{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+@media screen and (max-width: 650px) {
+    /*displays*/
+    .navbarSec .navProfIcon{
+        display: none;
+    }
+    .navbarSec .navBtnBX .langBtnWrapper{
+        display: none;
+    }
+}

@@ -1,0 +1,130 @@
+.navbarSec .navLinks{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    transition: var(--transition-main);
+}
+.navbarSec .navLinks > li{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition-main);
+}
+.navbarSec .navLinks > li .navLink{
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    width: 100%;
+    color: var(--font-navColor);
+    transition: all .4s ease;
+}
+.navbarSec .navLinks > li .navLink::after{
+    position: absolute;
+    bottom: 0px;
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color:var(--color-primary);
+    transition: all .3s ease;
+}
+.navbarSec .navLinks > li .navLink svg{
+    font-size: 20px;
+}
+.navbarSec .navLinks > li .navLink span{
+    font-size: 12px;
+}
+
+/*start effect*/
+.navbarSec .navLinks > li .navLink:hover{
+    color: var(--color-primary);
+}
+.navbarSec .navLinks > li .navLink.active{
+    color:var(--color-primary);
+    filter: drop-shadow(0px 0px 4px );
+}
+.navbarSec .navLinks > li .navLink:hover::after,
+.navbarSec .navLinks > li .navLink.active::after {
+    bottom: 0%;
+    width: 100%;
+}
+/*end effect*/
+
+
+@media screen and (max-width: 768px) {
+    .navbarSec .navLinks > li .navLink::after{
+        display: none;
+    }
+
+
+    /*start effect*/
+    .navbarSec .navLinks > li:has(.navLink.active){
+        border-bottom: 1px solid var(--color-primary);
+    }
+    .navbarSec .navLinks > li:hover{
+        border-bottom: 1px solid var(--color-primary);
+    }
+    .navbarSec .navLinks > li .navLink:hover{
+        transform: translateX(10px);
+    }
+    .navbarSec .navLinks li .navLink:hover::after,
+    .navbarSec .navLinks li .navLink.active::after{
+        display: none ;
+    }
+
+    /*Navbar Links*/
+    .navbarSec .navLinks{
+        position: relative;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0px !important;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%,  -100%);
+        width: calc( 100% - var(--margin-main) );
+        z-index: 1;
+        padding-block: 0px;
+        background-color: var(--bg-glass);
+        backdrop-filter: var(--main-blur);
+        border: 1px solid #ffffff23;
+        border-radius: 10px;
+        box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
+        opacity: 0;
+        visibility: hidden;
+    }
+    .navbarSec .navLinks.opened{
+        top: calc(100% + 10px);
+        transform: translate(-50%, 0);
+        visibility: visible;
+        opacity: 1;
+    }
+    .navbarSec .navLinks > li{
+        width: 100%;
+        border-bottom: 1px solid #ffffff23;
+        justify-content: flex-start;
+    }
+    .navbarSec .navLinks li .navLink{
+        height: unset;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 15px;
+        padding-block: 13px;
+        padding-inline: 15px;
+        color: #ffffffb2;
+    }
+    .navbarSec .navLinks > li .navLink svg{
+        font-size: 19px;
+    }
+    .navbarSec .navLinks > li .navLink span{
+        font-size: 13px;
+    }
+}

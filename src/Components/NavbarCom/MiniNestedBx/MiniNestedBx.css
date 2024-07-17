@@ -1,0 +1,71 @@
+html[dir="rtl"] .navbarSec .miniNestedBx{
+    left: -80%;
+}
+html[dir="rtl"] .navbarSec .linkItem:hover .miniNestedBx{
+    left: -90%;
+}
+/*miniNestedBx*/
+
+.navbarSec .linkItem:hover .miniNestedBx{
+    left: 102%;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.navbarSec .miniNestedBx{
+    width: 120px;
+    position: absolute;
+    left: 92%;
+    display: flex;
+    flex-direction: column;
+    padding-block: 7px;
+    border-radius: 5px;
+    border: 1px solid var(--color-borderLight);
+    background-color: var(--bg-nested);
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition-main);
+}
+.navbarSec .miniNestedBx .miniItem{
+    padding: 7px 12px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    width: 100%;
+    color: var(--font-navColor);
+    transition: var(--transition-main);
+}
+.navbarSec .miniNestedBx .miniItem:hover{
+    color: var(--color-primary);
+    transform: translateX(5px);
+}
+.navbarSec .miniNestedBx  .miniItem a span{
+    color: var(--font-navColor);
+    transition: var(--transition-main);
+}
+.navbarSec .miniNestedBx  .miniItem a svg{
+    color: var(--font-navColor);
+    font-size: 15px;
+    transition: var(--transition-main);
+}
+.navbarSec .miniNestedBx .miniItem:hover span,
+.navbarSec .miniNestedBx .miniItem:hover svg{
+    color: var(--color-primary);
+}
+.navbarSec .miniNestedBx  .miniItem:has(a.active),
+.navbarSec .miniNestedBx  .miniItem a.active span,
+.navbarSec .miniNestedBx  .miniItem a.active svg{
+    color: var(--color-primary);
+}
+/*miniNestedBx*/
+
+
+@media screen and (max-width:768px) {
+    /* .navbarSec .linkItem{
+        position: unset !important;
+    } */
+    .navbarSec .miniNestedBx{
+        display: none;
+    }
+}

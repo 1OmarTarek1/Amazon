@@ -1,0 +1,198 @@
+/* SidebarContent.css */
+
+.sidebar .sideHeader {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 17px;
+    padding-inline: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--color-borderLight);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-main);
+}
+
+.sidebar .searchWrapper {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    margin-bottom: 10px;
+}
+
+.sidebar .searchWrapper .sideSearch {
+    width: calc(100% - 38.39px);
+    padding: 7px 15px;
+    /* border-radius: 5px 0px 0px 5px; */
+    border-radius: 5px;
+    border: 1px solid var(--color-borderLight);
+    /* border-right: none; */
+    font-size: 14px;
+    color: var(--font-sideNavColor);
+    background-color: transparent;
+    transition: var(--transition-main);
+}
+
+.sidebar .searchWrapper .sideSearch::placeholder {
+    color: var(--font-sideNavColor);
+}
+
+.sidebar .searchWrapper > label {
+    display: grid;
+    place-content: center;
+    width: 38.39px;
+    height: 38.39px;
+    border: 1px solid var(--color-borderLight);
+    /* border-radius: 0px 5px 5px 0px; */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transition-main);
+}
+
+.sidebar .sidebar-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0px 10px;
+    color: var(--font-sideNavColor);
+}
+.sidebar .sidebar-content::-webkit-scrollbar {
+    width: 0;
+}
+
+.sidebar .sidebar-content svg {
+    font-size: 20px;
+}
+
+.sidebar .sideBody {
+    flex: 1;
+    margin-block: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--color-borderLight);
+    transition: var(--transition-main);
+    overflow-y: scroll ;
+}
+.sidebar .sideBody::-webkit-scrollbar {
+    width: 0;
+}
+
+.sidebar .containerIt{
+    padding-bottom: 5px;
+    margin-block: 10px;
+    border-bottom:1px solid var(--color-borderLight) ;
+}
+
+.sidebar .sideFooter  {
+    /* flex: 1; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-top: 1px solid var(--color-borderLight);
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.sidebar .sideFooter .footerItems svg {
+    font-size: 17px;
+}
+
+.sidebar .sideItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transition-main);
+    font-size: 13px;
+    color: var(--font-sideNavColor);
+}
+
+.sidebar .sideItem .name{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar .imgWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--font-sideNavColor);
+}
+
+/*lang btn*/
+.sidebar .sideItem .langBtnWrapper{
+    padding-inline: 0px;
+    margin-inline: 0px;
+    border: none;
+}
+
+.sidebar .sideItem 
+.langBtnWrapper .langBtn{
+    height: auto;
+}
+.sidebar .sideItem 
+.langBtnWrapper .langBtn
+svg {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.sidebar .sideItem 
+.langBtnWrapper .langBtn 
+span {
+    font-weight: 400;
+    opacity: 0;
+    visibility: hidden;
+}
+.sidebar .sideItem:hover 
+.langBtnWrapper .langBtn 
+span {
+    padding: 1px 10px;
+    border-radius: 5px;
+    background-color: var(--color-borderLight);
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+
+/* start effect */
+.sidebar .sideHeader:hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+.sidebar .sideItem:hover {
+    color: #fff;
+    background-color: #ffffff1c;
+}
+
+.sidebar .sideItem.active {
+    color: var(--color-primary);
+    background-color: #ffffff1c;
+}
+
+.sidebar .searchWrapper .sideSearch:focus {
+    border-color: var(--color-primary);
+}
+
+.sidebar .searchWrapper:has(.sideSearch:focus) > label {
+    border-color: var(--color-primary);
+}
+
+.sidebar .searchWrapper:has(.sideSearch:focus) > label:hover {
+    background-color: var(--color-primary);
+    color: #fff;
+    border-color: var(--color-primary);
+}
+/* end effect */
+
+
+
+

@@ -1,0 +1,164 @@
+/*Profile Box*/
+.navbarSec .profileBox {
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    position: absolute;
+    top: 155%;
+    z-index: 3;
+    background-color: var(--bg-nested);
+    border: 1px solid var(--color-borderLight);
+    border-radius: 5px;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
+    font-size: 13px;
+    color: #ffffffc2;
+    cursor: default;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition-main);
+}
+.navbarSec .profileBox .proBxLink{
+    width: 100%;
+    color: var(--font-navColor);
+    transition: var(--transition-main);
+}
+
+/*start show box with js*/
+.navbarSec .profileBox.opened{
+    pointer-events: auto;
+    visibility: visible;
+    opacity: 1;
+}
+/*end show box with js*/
+
+.navbarSec .BoxContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.navbarSec .profileItem .proBxLink{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.navbarSec .profileItem {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: var(--transition-main);
+}
+.navbarSec .profileItem:first-child,
+.navbarSec .profileItem:last-child {
+    padding-block: 12px;
+}
+.navbarSec .profileItem:first-child {
+    border-radius: 4px 4px 0px 0px;
+    margin-bottom: 7px;
+    border-bottom: 1px solid #ffffff23;
+}
+.navbarSec .profileItem:last-child {
+    border-radius: 0px 0px 4px 4px;
+    margin-top: 7px;
+    border-top: 1px solid #ffffff23;
+}
+
+/*theme btn*/
+.proBxLink .switch {
+    position: relative;
+    display: inline-block;
+    width: 28px;
+    height: 15px;
+}
+
+.proBxLink .switch .slider:before {
+    height: 9px;
+    width: 9px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+}
+
+.proBxLink .switch input:checked + .slider:before {
+    -webkit-transform: translateX(13px);
+    -ms-transform: translateX(13px);
+    transform: translateX(13px);
+}
+/*theme btn*/
+
+/*lang btn*/
+
+
+.profileBox .proBxLink .langBtnWrapper{
+    width: 100%;
+    padding-inline: 0px;
+    margin-inline: 0px;
+    border: none;
+    transition: var(--transition-main);
+}
+
+
+.profileBox .proBxLink  
+.langBtnWrapper .langBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: auto;
+    height: auto;
+}
+.profileBox .proBxLink  
+.langBtnWrapper .langBtn
+svg {
+    color: var(--font-navColor);
+    font-size: 19px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.profileBox .proBxLink  
+.langBtnWrapper .langBtn 
+span {
+    color: var(--font-navColor);
+    font-size: 13px;
+    position: relative;
+    font-weight: 300;
+    opacity: 1;
+    visibility: visible;
+}
+
+.profileBox .profileItem:hover .proBxLink 
+.langBtnWrapper .langBtn span,
+.profileBox .profileItem:hover .proBxLink  
+.langBtnWrapper .langBtn svg{
+    color: var(--color-primary);
+}
+
+/*lang btn*/
+
+
+/*Start Effect*/
+.navbarSec .profileItem:hover .proBxLink{
+    color: var(--color-primary);
+    transform: translateX(5px);
+}
+.navbarSec .profileItem:hover svg{
+    color: var(--color-primary);
+}
+.navbarSec .profileItem:hover {
+    background-color: var(--color-borderLight);
+}
+.navbarSec .profileItem:has(.proBxLink.active){
+    background-color: var(--color-borderLight);
+}
+.navbarSec .profileItem .proBxLink.active{
+    color: var(--color-primary);
+}
+.navbarSec .profileItem .proBxLink.active svg{
+    color: var(--color-primary);
+}
+/*End Effect*/
+

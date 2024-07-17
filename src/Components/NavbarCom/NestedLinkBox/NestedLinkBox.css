@@ -1,0 +1,118 @@
+
+
+
+/*Profile Box*/
+.navbarSec .nestedLinkBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    position: absolute;
+    top: 62px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    padding-block: 7px;
+    background-color: var(--bg-nested);
+    border: 1px solid var(--color-borderLight);
+    border-radius: 5px;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
+    font-size: 13px;
+    color: #ffffffc2;
+    cursor: default;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition-main);
+}
+.navbarSec .nestedLinkBox a{
+    width: 100%;
+    color: var(--font-navColor);
+    transition: var(--transition-main);
+}
+.navbarSec .nestedLinkBox a svg{
+    font-size: 20px;
+}
+
+/*start show box with js*/
+.navbarSec .nestedLinkBox.opened{
+    visibility: visible;
+    opacity: 1;
+    transition: var(--transition-main);
+}
+/*end show box with js*/
+
+.navbarSec .linkBoxContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.navbarSec .linkItem a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.navbarSec .linkItem {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 7px 10px;
+    cursor: pointer;
+    transition: var(--transition-main);
+}
+.navbarSec .linkItem:has(.active) .active {
+    color: var(--color-primary) ;
+}
+
+/* .navbarSec .linkItem:first-child {
+    padding-block: 10px;
+    margin-bottom: 7px;
+    border-bottom: 1px solid #ffffff23;
+}
+.navbarSec .linkItem:last-child {
+    padding-block: 10px;
+    margin-top: 7px;
+    border-top: 1px solid #ffffff23;
+} */
+
+
+
+/*Start Hover*/
+.navbarSec .linkItem > a:hover{
+    color: var(--color-primary);
+    transform: translateX(5px);
+}
+/*End Hover*/
+
+
+
+@media screen and ( max-width:768px ) {
+    .navbarSec .nestedLinkBox {
+        padding: 0px 0px 0px 30px;
+        justify-content: unset;
+        align-items: unset;
+        width: 100%;
+        position: relative;
+        top: unset;
+        left: unset;
+        transform: translateX(0);
+        z-index: unset;
+        background-color: transparent;
+        border: none;
+        box-shadow: unset;
+        font-size: 13px;
+        color: var(--font-navColor);
+    }
+
+    .navbarSec .nestedLinkBox.opened{
+        padding: 0px 0px 10px 30px;
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+
+
+
+

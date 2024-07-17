@@ -1,0 +1,27 @@
+/* .navbarSec .navLinks > li:has(.NestedLink) .navLink:focus{
+    color: var(--color-primary);
+}
+.navbarSec .navLinks > li:has(.NestedLink) .navLink:focus::after{
+    bottom: 0;
+    outline: none;
+} */
+
+@media screen and ( max-width:768px ) {
+    /* .navbarSec .navLinks > li:has(.NestedLink) .navLink:focus{
+        color: var(--color-primary);
+    }
+    .navbarSec .navLinks > li:has(.NestedLink) .navLink:focus::after{
+        display: none;
+    } */
+
+    .navbarSec .navLinks > li:has(.NestedLink){
+        height: 47px;
+        flex-direction: column;
+        align-items: unset;
+        overflow: hidden;
+    }
+    .navbarSec .navLinks > li:has(.nestedLinkBox.opened){
+        height: 197px;
+    }
+
+}

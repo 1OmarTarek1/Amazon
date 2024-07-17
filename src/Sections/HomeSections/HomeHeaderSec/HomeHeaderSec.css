@@ -1,0 +1,54 @@
+:root {
+    --bg-body: #f0f0f0; /* Example background color */
+    --overLay-Brightness: brightness(0.7); /* Example brightness value */
+    --transition-main: all 0.3s ease-in-out; /* Example transition value */
+  }
+  
+  .header-container {
+    position: relative;
+    height: calc(100vh);
+    overflow: hidden;
+  }
+  
+  .header-background {
+    background-image: url('../../../Assets/Images/background.jpg');
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: var(--overLay-Brightness) blur(2px);    
+    background: linear-gradient(to top, var(--bg-body), transparent 30%);
+    transition: var(--transition-main);
+  }
+  
+  .header-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .text-content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .mb-3 {
+    margin-bottom: 1rem;
+  }
+  
+  .text-content .homeSubTitle {
+    color: var(--font-navColor);
+  }

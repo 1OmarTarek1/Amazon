@@ -1,0 +1,40 @@
+.profileLink{
+    position: relative;
+    width: 33px;
+    height: 33px;
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+    border: 1px solid var(--font-navColor);
+    color: var(--font-navColor);
+    background-color: transparent;
+    transition: var(--transition-main);
+}
+
+.profileLink:hover{
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+.profileLink.active{
+    border: 1px solid var(--color-primary);
+    box-shadow: 0 0 10px 1px var(--color-primary);
+}
+
+.profileLink svg{
+    position: relative;
+    border-radius: 50%;
+    color: var(--font-navColor);
+    transition: var(--transition-main);
+}
+.profileLink:hover span svg{
+    color: var(--color-primary);
+}
+.profileLink.active span svg{
+    color: var(--color-primary);
+}
+
+@media screen and ( max-width: 768px) {
+    .profileLink{
+        margin-left: 0px;
+    }
+}

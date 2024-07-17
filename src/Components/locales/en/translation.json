@@ -1,0 +1,38 @@
+{
+    "navbar": {
+        "home": "Home",
+        "shop": "Shop",
+        "profile":"Profile",
+        "products": "Products",
+        "about": "About",
+        "notifications":"Notifications",
+        "shoppingCar":"Shopping Car",
+        "favorites":"Favorites",
+        "theme":"Theme",
+        "language":"Language",
+        "settings":"Settings",
+        "logout":"Logout"
+    },
+
+    
+    "categoryData": {
+        "men": "Men",
+        "women": "Women",
+        "boys": "Boys",
+        "girls": "Girls",
+        "tShirts": "T-Shirts",
+        "pants": "Pants",
+        "shoes": "Shoes",
+        "other": "Other"
+    },
+
+
+    "homeHeader": {
+        "headingTxt": "Welcome In Our Store",
+        "subHeadingTxt": "Thanks For Visiting Us"
+    },
+
+    "placeholders": {
+        "search" : "Search..."
+    }
+}

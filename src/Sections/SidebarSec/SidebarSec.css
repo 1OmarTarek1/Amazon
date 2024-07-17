@@ -1,0 +1,92 @@
+
+/* src/components/Sidebar.css */
+.sidebar {
+  position: fixed;
+  left: -250px; 
+  width: 250px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 98vh;
+  padding-block: 20px 5px;
+  background-color: var(--bg-glass);
+  backdrop-filter: var(--main-blur);
+  border: 1px solid #ffffff23;
+  border-radius: 10px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
+  color: var(--font-sideNavColor);
+  z-index: 999;
+  border-radius: 10px;
+  transition: var(--transition-main);
+}
+.sidebar.open {
+  left: 7px;
+}
+
+html[dir="rtl"] .sidebar {
+  right: -250px; 
+}
+html[dir="rtl"] .sidebar.open {
+  right: 7px;
+}
+
+
+/*Button*/
+.sidebar .open-sidebar-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 90vh;
+  right: -5px;
+  transform: translateX(100%);
+  border-radius: 15%;
+  border: none;
+  font-size: 14px;
+  opacity: .7;
+  cursor: pointer;
+  background-color: var(--bg-nested);
+  border: 1px solid #ffffff23;
+  color: var(--font-sideNavColor);
+  transition: var(--transition-main);
+}
+.sidebar.open .open-sidebar-btn {
+  top: 17px;
+  right: 0%;
+  transform: translateX(calc( 0% - 15px ));
+  border-radius: 20%;
+  border: 1px solid transparent;
+  background-color: transparent;
+}
+
+html[dir="rtl"] .sidebar .open-sidebar-btn {
+  right: 282px; 
+}
+html[dir="rtl"] .sidebar.open .open-sidebar-btn {
+  right: 75%;
+}
+
+/*start effect*/
+.sidebar .open-sidebar-btn:hover{
+  opacity: 1;
+}
+
+
+
+
+
+/* @media screen and ( max-width: 768px ) {
+  .sidebar {
+    z-index: 998;
+  }
+  .sidebar.open {
+    z-index: 999;
+  }
+} */
+@media screen and ( max-width: 300px ) {
+  .sidebar.open {
+    width: 95%;
+    left: 6px;
+  }
+}

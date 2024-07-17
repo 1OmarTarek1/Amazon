@@ -1,0 +1,51 @@
+
+.MainCarouselSec {
+    margin: 0px;
+    padding: 0px;
+}
+.MainCarouselSec .slick-slide {
+    padding-inline: 5px;
+}
+.MainCarouselSec .slick-dots {  
+    bottom: -30px;
+}
+.MainCarouselSec .slick-dots li button:before{  
+    color: var(--font-mainColor);
+}
+
+/* .MainCarouselSec .slick-next {
+    right: -27px;
+} */
+
+.MainCarouselSec .slick-next::before,
+.MainCarouselSec .slick-prev::before{
+    font-size: 25px;
+    color: var(--font-mainColor);
+}
+
+/* .MainCarouselSec .slick-prev {
+    margin-inline: -5px;
+    z-index: 1;
+} */
+
+
+/* @media screen and (max-width: 768px) {
+    .MainCarouselSec .slick-dots {
+        display: none !important;
+    }
+} */
+
+@media screen and (max-width: 420px) {
+    .MainCarouselSec .slick-dots {
+        display: none !important;
+    }
+    
+    .MainCarouselSec .slick-next::before,
+    .MainCarouselSec .slick-prev::before{
+        display: none;
+    }
+    
+    .MainCarouselSec .slick-slide {
+        margin-inline: 0px;
+    }
+}

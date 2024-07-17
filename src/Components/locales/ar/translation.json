@@ -1,0 +1,39 @@
+{
+    "navbar": {
+        "home": "الرئيسية",
+        "shop": "المتجر",
+        "profile":"حسابي",
+        "about": "حول",
+        "products": "المنتجات",
+        "notifications":"الاشعارات",
+        "shoppingCar":"عربة التسوق",
+        "favorites":"المفضلة",
+        "theme":"الوضع",
+        "language":"اللغة",
+        "settings":"الاعدادات",
+        "logout":"خروج"
+    },
+
+
+    "categoryData": {
+        "men": "رجالي",
+        "women": "حريمي",
+        "boys": "شبابي",
+        "girls": "بناتي",
+        "tShirts": "قمصان",
+        "pants": "بناطيل",
+        "shoes": "احذية",
+        "other": "اخري"
+    },
+
+
+    "homeHeader": {
+        "headingTxt": "مرحبا بكم في متجرنا",
+        "subHeadingTxt": "شكرا لزيارتكم لنا"
+    },
+
+    "placeholders": {
+        "search" : "بحث..."
+    }
+    
+}
