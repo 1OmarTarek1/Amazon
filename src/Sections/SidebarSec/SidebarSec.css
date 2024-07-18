@@ -16,7 +16,7 @@
   color: var(--font-sideNavColor);
   z-index: 999;
   border-radius: 10px;
-  transition: var(--transition-main);
+  transition: var(--transition-sec);
 }
 .sidebar.open {
   left: 7px;

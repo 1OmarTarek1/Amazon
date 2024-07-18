@@ -40,6 +40,7 @@
     --overLay-Brightness    : brightness(40%);
     --main-blur             : blur(30px);
     --transition-main       : all .3s ease;
+    --transition-sec        : all .5s ease-in-out;
     --distance-main         : 75px;
     --margin-main           : calc(var(--distance-main) - ( var(--distance-main) / 2 ));
     --padding-main          : calc(var(--distance-main) - ( var(--distance-main) / 3 ));

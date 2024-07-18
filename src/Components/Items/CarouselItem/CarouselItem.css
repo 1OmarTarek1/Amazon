@@ -16,9 +16,15 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: var(--font-navColor);
+    color: #000000;
     z-index: 1;
-    font-size: 18px;
+    width: 100px;
+    text-align: center;
+    padding: 5px 0px;
+    border-radius: 50px 3px 50px 3px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.719);
+    font-size: 13px;
     transition: var(--transition-main);
 }
 .carouselItem .imgWrapper{
@@ -62,9 +68,9 @@
 }
 
 @media screen and (max-width: 600px) {
-    .carouselItem .itemTitle{
+    /* .carouselItem .itemTitle{
         font-size: 16px;
-    }
+    } */
     .MainCarouselSec .slick-list:hover .carouselItem:not(:hover){
         filter: blur(0px);
     }

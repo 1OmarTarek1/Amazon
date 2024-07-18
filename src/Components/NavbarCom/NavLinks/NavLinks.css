@@ -100,6 +100,7 @@
         box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
         opacity: 0;
         visibility: hidden;
+        transition: var(--transition-sec);
     }
     .navbarSec .navLinks.opened{
         top: calc(100% + 10px);
