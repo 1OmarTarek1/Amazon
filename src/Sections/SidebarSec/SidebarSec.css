@@ -47,9 +47,9 @@ html[dir="rtl"] .sidebar.open {
   width: 30px;
   height: 30px;
   position: absolute;
-  top: 90vh;
-  right: -5px;
-  transform: translateX(100%);
+  top: 10%;
+  right: 0%;
+  transform: translateX(120%);
   border-radius: 15%;
   border: none;
   font-size: 14px;
@@ -70,10 +70,11 @@ html[dir="rtl"] .sidebar.open {
 }
 
 html[dir="rtl"] .sidebar .open-sidebar-btn {
-  right: 282px; 
+  right: 100%; 
+  transform: translateX(-20%);
 }
 html[dir="rtl"] .sidebar.open .open-sidebar-btn {
-  right: 75%;
+  transform: translateX(140%);
 }
 
 /*start effect*/
