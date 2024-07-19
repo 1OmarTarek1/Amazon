@@ -6,7 +6,6 @@
   transform: translate(-100%, -50%);
   height: 98vh;
   padding-block: 20px 5px;
-  background-color: var(--bg-glass);
   border: 1px solid #ffffff23;
   border-radius: 10px;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);

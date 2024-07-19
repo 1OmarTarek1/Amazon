@@ -1,6 +1,7 @@
 .headroom {
     z-index: 999 !important;
 }
+
 .navbarSec {
     position: relative;
     height: fit-content;

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap'); */
 
 /* Define dark mode variables */
 :root {
@@ -15,11 +15,11 @@
     /* Some Colors */
     --color-black           : #1f2122;
 
-    --glassBG-dark          : #1111116e;
-    --glassBG-light         : #ffffff18;
+    --glassBG-dark          : #11111181;
+    --glassBG-light         : #ffffff63;
 
     /* Background Colors */
-    --bg-glass              : var(--glassBG-light);
+    --bg-glass              : var(--glassBG-dark);
     --bg-nav                : var(--color-black);
     --bg-body               : var(--color-black);
     --bg-footer             : var(--color-black);
@@ -33,12 +33,12 @@
     /* Font Colors */
     --font-mainColor        : #E0E0E0;
     --font-secondaryColor   : #B0B0B0;
-    --font-navColor         : #ffffff9f;
-    --font-sideNavColor     : #E0E0E0;
+    --font-navColor         : #ffffff9c;
+    --font-sideNavColor     : #ffffff9c;
 
     /* Other */
-    --overLay-Brightness    : brightness(40%);
-    --main-blur             : blur(10px);
+    --bg-Brightness         : rgba(0, 0, 0, 0.514);
+    --main-blur             : blur(3px);
     --transition-main       : all .3s ease;
     --transition-sec        : all .3s ease-in-out;
     --distance-main         : 75px;
@@ -50,22 +50,25 @@
 [data-theme='light'] {
 
     /* Background Colors */
-    --bg-glass              : var(--glassBG-dark);
+    --bg-glass              : #111111a4;
     --bg-body               : #eeeeee;
     --bg-footer             : #f3f3f3;
     --bg-section            : #f4f6fa;
     --bg-component          : #fff;
     --color-borderLight     : #ffffff1f;
+    --bg-Brightness         : rgba(0, 0, 0, 0.322);
+
+
 
 
     /* Font Colors */
     --font-mainColor        : #000000;
     --font-secondaryColor   : #333333;
-    --font-navColor         : #ffffff9f;
-    --font-sideNavColor     : #E0E0E0;
+    /* --font-navColor         : #444;
+    --font-sideNavColor     : #444; */
+
 
     /* Other */
-    --overLay-Brightness    : brightness(65%);
 
 }
 

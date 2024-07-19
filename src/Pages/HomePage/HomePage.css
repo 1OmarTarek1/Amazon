@@ -1,3 +1,21 @@
+
+.MAIN-WRAPPER:has(.homePage) 
+.headroom--unfixed .navbarSec{
+    box-shadow: none;
+}
+.MAIN-WRAPPER:has(.homePage) 
+.headroom--unfixed .navbarSec 
+.navContainer::before {
+    border: 1px solid #ffffff15;
+}
+
+.MAIN-WRAPPER:has(.homePage) 
+.headroom--unfixed .navbarSec 
+.navContainer::before{
+    background-color: transparent;
+    transition: var(--transition-main);
+}
+
 .MAIN-WRAPPER:has(.homePage)
  .headroom-wrapper{
     position: absolute;

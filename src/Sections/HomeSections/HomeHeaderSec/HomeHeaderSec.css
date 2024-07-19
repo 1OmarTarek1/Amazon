@@ -1,9 +1,3 @@
-:root {
-    --bg-body: #f0f0f0; /* Example background color */
-    --overLay-Brightness: brightness(0.7); /* Example brightness value */
-    --transition-main: all 0.3s ease-in-out; /* Example transition value */
-  }
-  
   .header-container {
     position: relative;
     height: calc(100vh);
@@ -23,8 +17,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    backdrop-filter: var(--overLay-Brightness) blur(2px);    
     background: linear-gradient(to top, var(--bg-body), transparent 30%);
+    background-color: var(--bg-Brightness);
     transition: var(--transition-main);
   }
   
@@ -50,5 +44,5 @@
   }
   
   .text-content .homeSubTitle {
-    color: var(--font-navColor);
+    color: #ffffffab;
   }
