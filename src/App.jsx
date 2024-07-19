@@ -22,8 +22,8 @@ const App = () => {
   useEffect(() => {
     const dir = i18n.language === 'ar' ? 'rtl' : 'ltr';
     document.documentElement.setAttribute('dir', dir); 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   // [i18n.language]
   
 

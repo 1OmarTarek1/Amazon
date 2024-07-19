@@ -86,7 +86,7 @@ const DetailsItem = (props) => {
                 className="content"
                 ref={contentRef}
                 style={{
-                    height: isOpen ? `${ height + 5 }px` : '0px',
+                    height: isOpen ? `${ height + 10 }px` : '0px',
                     opacity: isOpen ? 1 : 0,
                 }}
             >

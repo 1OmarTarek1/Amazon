@@ -33,7 +33,7 @@
     z-index: -1;
     border-radius: 5px;
     backdrop-filter: var(--main-blur);
-    background: var(--bg-glass);
+    background-color: var(--bg-glass);
     transition: var(--transition-main);
 }
 .navbarSec .nestedLinkBox a{
@@ -104,12 +104,18 @@ html[dir="rtl"] .navbarSec
         left: unset;
         transform: translateX(0);
         z-index: unset;
-        background-color: transparent;
         border: none;
         box-shadow: unset;
         font-size: 13px;
         color: var(--font-navColor);
     }
+
+    .navbarSec .nestedLinkBox:before {
+        backdrop-filter: blur(0); 
+        background-color: transparent ;
+    }
+    
+    
 
     .navbarSec .nestedLinkBox.opened{
         padding: 0px 0px 10px 30px;

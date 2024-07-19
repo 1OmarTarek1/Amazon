@@ -34,13 +34,13 @@
     --font-mainColor        : #E0E0E0;
     --font-secondaryColor   : #B0B0B0;
     --font-navColor         : #ffffff9c;
-    --font-sideNavColor     : #ffffff9c;
+    --font-sideNavColor     : #ffffffb9;
 
     /* Other */
     --bg-Brightness         : rgba(0, 0, 0, 0.514);
     --main-blur             : blur(3px);
     --transition-main       : all .3s ease;
-    --transition-sec        : all .3s ease-in-out;
+    --transition-sec        : all .3s ease;
     --distance-main         : 75px;
     --margin-main           : calc(var(--distance-main) - ( var(--distance-main) / 2 ));
     --padding-main          : calc(var(--distance-main) - ( var(--distance-main) / 3 ));
