@@ -11,14 +11,6 @@ const ProfileBox = ({ profileBx, setIsLoading }) => {
     return (
         <div 
         className={profileBx ? "profileBox opened" : "profileBox"}
-        style={ localStorage.getItem('selectedLanguage') === "en" 
-            ? {
-                right:"-10px"
-            }
-            : {
-                right:"-125px"
-            }
-        }
         >
             <ul className="BoxContainer">
                 <li className="profileItem bxLink">

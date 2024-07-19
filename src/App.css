@@ -4,7 +4,7 @@
 :root {
     /* ===================== COLORS ===================== */
     /* Primary Colors */
-    --color-primary         : #2196F3;
+    --color-primary         : #d69418;
     --dark-primary-color    : #1565C0;
     --light-primary-color   : #64B5F6;
 
@@ -51,9 +51,9 @@
 
     /* Background Colors */
     --bg-glass              : #111111a4;
-    --bg-body               : #eeeeee;
-    --bg-footer             : #f3f3f3;
-    --bg-section            : #f4f6fa;
+    --bg-body               : #eee;
+    --bg-footer             : #f3f3f3d8;
+    --bg-section            : #ffffffef;
     --bg-component          : #fff;
     --color-borderLight     : #ffffff1f;
     --bg-Brightness         : rgba(0, 0, 0, 0.322);
