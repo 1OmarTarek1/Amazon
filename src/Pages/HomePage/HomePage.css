@@ -10,20 +10,17 @@
     transition: var(--transition-main);
 }
 .MAIN-WRAPPER:has(.homePage)
- .navbarSec {
-    border-radius: 10px;
-}
-.MAIN-WRAPPER:has(.homePage) 
-.navbarSec .navContainer {
+.navbarSec {
     border-radius: 10px;
 }
 
+.MAIN-WRAPPER:has(.homePage) 
+.navContainer::before {
+    border-radius: 10px;
+}
 
 .MAIN-WRAPPER:has(.homePage) 
-.headroom--pinned:has(.navbarSec) .navbarSec{
-    border-radius: 0;
-}
-.MAIN-WRAPPER:has(.homePage) 
-.headroom--pinned:has(.navbarSec) .navContainer{
+.headroom--pinned:has(.navbarSec) 
+.navContainer::before{
     border-radius: 0;
 }

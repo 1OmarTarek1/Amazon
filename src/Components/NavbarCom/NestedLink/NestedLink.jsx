@@ -60,7 +60,7 @@ const NestedLink = () => {
             >
                 <div 
                 className={isActive ? "navLink active" : "navLink "}
-                tabIndex="0"
+                // tabIndex="0"
                 >
                     <IoAppsSharp />
                     <span>

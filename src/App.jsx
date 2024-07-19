@@ -23,7 +23,8 @@ const App = () => {
     const dir = i18n.language === 'ar' ? 'rtl' : 'ltr';
     document.documentElement.setAttribute('dir', dir); 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [i18n.language]);
+  });
+  // [i18n.language]
   
 
   return (
@@ -44,7 +45,7 @@ const App = () => {
           />
           <DTitle />
 
-        <div className="MAIN-WRAPPER">          
+        <div className="MAIN-WRAPPER">       
             <NavbarSec 
             isLoading={isLoading}
             setIsLoading={setIsLoading}

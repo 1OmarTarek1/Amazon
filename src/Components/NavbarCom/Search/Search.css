@@ -1,6 +1,5 @@
 .navbarSec .search{
     border: 1px solid transparent;
-    background-color: bisque;
     width: 100%;
     background-color: var(--bg-glass);
     color: #fff;
@@ -20,26 +19,26 @@
 .navbarSec .pcSearch{
     position: absolute;
     width: calc( 100% - 80px);
-    bottom: 0;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -100%);
     padding: 10px 20px;
-    backdrop-filter: var(--main-blur);
+    /* backdrop-filter: var(--main-blur); */
+    background-color: #5c5c5ce1;
     border: 1px solid #ffffff23;
     border-radius: 5px;
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
+    pointer-events: none;
     opacity: 0;
     visibility: hidden;
 }
 .navbarSec .pcSearch.opened{
-    bottom: -65px;
-    transform: translateX(-50%);
+    transform: translate(-50%, 20%);
+    pointer-events: auto;
     visibility: visible;
     opacity: 1;
 }
 /*mobSearch*/
 .navbarSec .mobSearch{
-    
     padding: 13px 16px;
     border-radius: 0px 0px 10px 10px;
     font-size: 14px;
