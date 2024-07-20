@@ -1,4 +1,4 @@
-.Loading-screen{
+.LoadingSec-screen{
     position: fixed;
     top: 0;
     left: 0;
@@ -11,15 +11,15 @@
     z-index: 9000;
 }
 
-.Loading-screen.active {
+.LoadingSec-screen.active {
     display: flex;
 }
 
-.Loading-screen:not(.active) {
+.LoadingSec-screen:not(.active) {
     display: none;
 }
 
-.Loading-screen .loader {
+.LoadingSec-screen .loader {
     position: absolute;
     top: calc(50% - 32px);
     left: calc(50% - 32px);
@@ -29,7 +29,7 @@
     perspective: 800px;
 }
 
-.Loading-screen .loader .inner {
+.LoadingSec-screen .loader .inner {
     position: absolute;
     box-sizing: border-box;
     width: 100%;
@@ -37,21 +37,21 @@
     border-radius: 50%;  
 }
 
-.Loading-screen .loader .inner.one {
+.LoadingSec-screen .loader .inner.one {
     left: 0%;
     top: 0%;
     animation: rotate-one 1s linear infinite;
     border-bottom: 3px solid #EFEFFA;
 }
 
-.Loading-screen .loader .inner.two {
+.LoadingSec-screen .loader .inner.two {
     right: 0%;
     top: 0%;
     animation: rotate-two 1s linear infinite;
     border-right: 3px solid #EFEFFA;
 }
 
-.Loading-screen .loader .inner.three {
+.LoadingSec-screen .loader .inner.three {
     right: 0%;
     bottom: 0%;
     animation: rotate-three 1s linear infinite;

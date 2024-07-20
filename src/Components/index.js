@@ -42,5 +42,6 @@ export { default as HumansLayout } from './PagesLayout/HumansLayout/HumansLayout
 
 
 export { default as Loading } from './Loading/Loading'
+export { default as LoadingSec } from './LoadingSec/LoadingSec'
 
 export { default as i18 } from './i18n/i18n'

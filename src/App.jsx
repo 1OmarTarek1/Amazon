@@ -7,11 +7,12 @@ import "aos/dist/aos.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { NavbarSec, SidebarSec, FooterSec } from './Sections';
-import { DTitle, ScrollToTop, ToTopBtn, WebRoutes, Loading } from './Components';
+import { DTitle, ScrollToTop, ToTopBtn, WebRoutes, Loading, LoadingSec } from './Components';
 import './App.css';
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [isLoadingSec, setIsLoadingSec] = useState(false);
 
   useEffect(() => {
     AOS.init({
@@ -30,36 +31,36 @@ const App = () => {
   return (
     <Router basename='Amazon'>
     <I18nextProvider i18n={i18n}>
-      {isLoading 
+      { isLoading
       ? (
         <Loading 
         isLoading={isLoading}
         setIsLoading={setIsLoading}
         />
-      ) 
+      )
       : (
-        <>
-          <Loading 
-          isLoading={isLoading}
-          setIsLoading={setIsLoading}
-          />
-          <DTitle />
+          <>
+            <DTitle />
+            <div className="MAIN-WRAPPER" style={{position:"relative"}}>       
+                <LoadingSec 
+                    isLoadingSec={isLoadingSec}
+                    setIsLoadingSec={setIsLoadingSec}
+                />
+              <NavbarSec 
+              isLoadingSec={isLoadingSec}
+              setIsLoading={setIsLoading}
+              />
+              <SidebarSec setIsLoading={setIsLoading}/>
+                <WebRoutes />
+              <FooterSec />
+              
 
-        <div className="MAIN-WRAPPER">       
-            <NavbarSec 
-            isLoading={isLoading}
-            setIsLoading={setIsLoading}
-            />
-            <SidebarSec setIsLoading={setIsLoading}/>
-              <WebRoutes />
-            <FooterSec />
-            
-
-            <ToTopBtn />
-            <ScrollToTop />
-        </div>
-        </>
-      )}
+              <ToTopBtn />
+              <ScrollToTop />
+            </div>
+          </>
+      )
+      }
 
     </I18nextProvider>
     </Router>

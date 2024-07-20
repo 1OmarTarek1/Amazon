@@ -11,9 +11,9 @@ const Loading = ({ isLoading, setIsLoading }) => {
 
     useEffect(() => {
         setIsLoading(true);
-        const timer = setTimeout(() => setIsLoading(false), 500);
+        const timer = setTimeout(() => setIsLoading(false), 1000);
         return () => clearTimeout(timer);
-    }, [location, setIsLoading]);
+    }, [ setIsLoading, location ]);
 
 
 //   useEffect(() => { 
@@ -34,11 +34,11 @@ const Loading = ({ isLoading, setIsLoading }) => {
 //   }, []);
 
     return (
-        <div className={`loading-screen ${isLoading ? 'active' : ''}`}>
+        <div className={`Loading-screen ${isLoading ? 'active' : ''}`}>
             <div className="loader">
-            <div className="inner one"></div>
-            <div className="inner two"></div>
-            <div className="inner three"></div>
+                <div className="inner one"></div>
+                <div className="inner two"></div>
+                <div className="inner three"></div>
             </div>
         </div>
     )

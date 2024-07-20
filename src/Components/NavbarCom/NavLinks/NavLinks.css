@@ -55,6 +55,7 @@
 .navbarSec .navLinks > li .navLink.active::after {
     bottom: 0%;
     width: 100%;
+    border-radius: 5px;
 }
 /*end effect*/
 
