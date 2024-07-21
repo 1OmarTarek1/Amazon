@@ -36,18 +36,26 @@
 
 .navIcnWrapper{
     display: flex;
+    gap: 5px;
 }
 
 .navbarSec .navProfIcon{
-    padding-inline: 15px;
-    font-size: 20px;
+    /* padding-inline: 15px; */
+    width: 33px;
+    height: 33px;
+    display: grid;
+    place-content: center;
+    border-radius: 5px;
+    border: 1px solid var(--color-borderLight);
+    font-size: 17px;
     transition: var(--transition-main);
 }
-.navIcnWrapper .navProfIcon:nth-child(2){
+/* .navIcnWrapper .navProfIcon:nth-child(2){
     border-inline: 1px solid var(--color-borderLight) ;
-}
+} */
 .navbarSec .navProfIcon:hover{
     color: var(--color-primary);
+    border-color: var(--color-primary);
 }
 .navbarSec .navProfIcon.active{
     color: var(--color-primary);
@@ -68,10 +76,35 @@
     border-radius: 5px;
     font-size: 14px;
     font-weight: 600;
-    color: #fff;
-    background-color: var(--color-primary);
+    color: var(--font-navColor);
+    background-color: transparent;
+    border: 1px solid var(--color-borderLight);
 }
 
+
+
+
+/*SideBtn*/
+.navbarSec .logoBX .sideBtn {
+    position: relative;
+    display: grid;
+    place-content: center;
+    width: 33px;
+    height: 33px;
+    border-radius: 5px;
+    border: 1px solid var(--color-borderLight);
+    color: var(--font-navColor);
+    cursor: pointer;
+    transition: var(--transition-main);
+}
+.navbarSec .logoBX .sideBtn:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+.navbarSec .logoBX .sideBtn svg{
+    position: relative;
+    left: -1px;
+}
 
 
 
@@ -95,8 +128,8 @@
     font-size: 18px;
 }
 .navbarSec .icnWrapperSrch:hover{
-    color: #fff;
-    background-color: var(--color-primary);
+    color: var(--color-primary);
+    /* background-color: var(--color-primary); */
     border-color: var(--color-primary);
 
 }
@@ -108,9 +141,9 @@
 
 @media screen and (max-width: 768px) {
     /*displays*/
-    .navbarSec .icnWrapperSrch{
+    /* .navbarSec .icnWrapperSrch{
         display: none;
-    }
+    } */
     
     
     .navbarSec .navContainer{
@@ -118,19 +151,20 @@
         padding: 12px 20px;
     }
     /*LOGO*/
-    .navbarSec .logo{
+    /* .navbarSec .logoBX .logo{
+        display: none;
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-    }
+    } */
 }
 @media screen and (max-width: 650px) {
     /*displays*/
     .navbarSec .navProfIcon{
         display: none;
     }
-    .navbarSec .navBtnBX .langBtnWrapper{
+    .navbarSec .logoBX .langBtnWrapper{
         display: none;
     }
 }

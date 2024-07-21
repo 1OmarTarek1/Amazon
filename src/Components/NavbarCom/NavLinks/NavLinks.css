@@ -76,6 +76,10 @@
     .navbarSec .navLinks > li .navLink:hover{
         transform: translateX(10px);
     }
+    html[dir="rtl"] .navbarSec
+    .navLinks > li .navLink:hover{
+        transform: translateX(-10px);
+    }
     .navbarSec .navLinks li .navLink:hover::after,
     .navbarSec .navLinks li .navLink.active::after{
         display: none ;

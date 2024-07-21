@@ -110,6 +110,7 @@ html[dir="rtl"] .navbarSec .profileBox{
 
 .profileBox .proBxLink .langBtnWrapper{
     width: 100%;
+    height: auto;
     padding-inline: 0px;
     margin-inline: 0px;
     border: none;

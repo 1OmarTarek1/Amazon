@@ -13,6 +13,11 @@ import './App.css';
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [isLoadingSec, setIsLoadingSec] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
 
   useEffect(() => {
     AOS.init({
@@ -49,8 +54,14 @@ const App = () => {
               <NavbarSec 
               isLoadingSec={isLoadingSec}
               setIsLoading={setIsLoading}
+              toggleSidebar={toggleSidebar}
               />
-              <SidebarSec setIsLoading={setIsLoading}/>
+              <SidebarSec 
+              isOpen={isOpen}
+              setIsOpen={setIsOpen}
+              toggleSidebar={toggleSidebar}
+              setIsLoading={setIsLoading}
+              />
                 <WebRoutes />
               <FooterSec />
               

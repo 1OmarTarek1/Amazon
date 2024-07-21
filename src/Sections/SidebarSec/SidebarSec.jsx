@@ -1,30 +1,19 @@
-import { useState, useEffect, useRef } from 'react';
-import { FaList, FaXmark } from 'react-icons/fa6';
+import { useEffect, useRef } from 'react';
 import { SidebarContent } from '../../Components';
 import './SidebarSec.css';
 
-const SidebarSec = ({setIsLoading}) => {
-  const [isOpen, setIsOpen] = useState(false);
+const SidebarSec = ({ setIsLoading, toggleSidebar, isOpen, setIsOpen }) => {
   const sidebarRef = useRef(null);
-  const sidebarBtnRef = useRef(null);
 
-  const toggleSidebar = () => {
-    setIsOpen(!isOpen);
-    // const Items = document.querySelectorAll(".sideItem");
-    // Items.forEach(item => item.classList.remove('active'));
-  };
   const handleCloseSidebar = (event) => {
     if (
       sidebarRef.current &&
-      !sidebarRef.current.contains(event.target) &&
-      sidebarBtnRef.current &&
-      !sidebarBtnRef.current.contains(event.target)
+      !sidebarRef.current.contains(event.target)
     ) {
-      // const Items = document.querySelectorAll(".sideItem");
-      // Items.forEach(item => item.classList.remove('active'));
       setIsOpen(false);
     }
   };
+
   useEffect(() => {
     if (isOpen) {
       document.addEventListener('mousedown', handleCloseSidebar);
@@ -48,16 +37,6 @@ const SidebarSec = ({setIsLoading}) => {
       setIsLoading={setIsLoading}
       />
 
-        <button 
-          onClick={toggleSidebar} 
-          className="open-sidebar-btn"
-          ref={sidebarBtnRef}
-        >
-          { isOpen
-            ? <FaXmark data-aos="fade" data-aos-duration="500"/> 
-            : <FaList data-aos="fade" data-aos-duration="500"/>
-          }
-        </button>
       </div>
     </>
   );

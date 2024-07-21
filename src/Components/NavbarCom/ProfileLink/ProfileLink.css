@@ -4,8 +4,8 @@
     height: 33px;
     display: grid;
     place-content: center;
-    border-radius: 50%;
-    border: 1px solid var(--font-navColor);
+    border-radius: 5px;
+    border: 1px solid var(--color-borderLight);
     color: var(--font-navColor);
     background-color: transparent;
     transition: var(--transition-main);
@@ -16,13 +16,15 @@
     color: var(--color-primary);
 }
 .profileLink.active{
-    border: 1px solid var(--color-primary);
-    box-shadow: 0 0 10px 1px var(--color-primary);
+    /* border-color: var(--color-primary); */
+    filter: drop-shadow( 0px 0px 4px );
+    /* box-shadow: 0 0 10px 1px var(--color-primary); */
 }
 
 .profileLink svg{
     position: relative;
-    border-radius: 50%;
+    top: -1px;
+    border-radius: 3px;
     color: var(--font-navColor);
     transition: var(--transition-main);
 }

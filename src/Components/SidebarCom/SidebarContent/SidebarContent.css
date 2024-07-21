@@ -4,15 +4,41 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 17px;
-    padding-inline: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid var(--color-borderLight);
+    gap: 15px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid var(--color-borderLight);
     font-size: 16px;
     font-weight: 600;
+    color: var(--font-sideNavColor);
     cursor: pointer;
     transition: var(--transition-main);
 }
+.sidebar .sideHeader .textWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.sidebar .sideHeader .profilePhoto{
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-content: center;
+    border-radius: 5px;
+    border: 1px solid var(--color-borderLight);
+}
+.sidebar .sideHeader .profilePhoto svg{
+    font-size: 18px;
+}
+.sidebar .sideHeader .sideUsername{
+    font-size: 14px;
+}
+.sidebar .sideHeader .sideUserActivity{
+    font-size: 12px;
+    color: #ffffff85;
+}
+
+
 
 .sidebar .searchWrapper {
     display: flex;
@@ -165,7 +191,11 @@ span {
 /* start effect */
 .sidebar .sideHeader:hover {
     color: #fff;
-    border-color: #fff;
+    background-color: #ffffff1c;
+}
+.sidebar .sideHeader.active {
+    color: var(--color-primary);
+    background-color: #ffffff1c;
 }
 
 .sidebar .sideItem:hover {

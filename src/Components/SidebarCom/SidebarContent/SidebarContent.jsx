@@ -2,10 +2,10 @@ import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import CategoryTitlesData  from '../../../Data/CategoryTitlesData'
-import { FaBars} from 'react-icons/fa6';
 import { IoCartOutline, IoContrastOutline, IoEarth, IoHeartOutline, IoHomeOutline, IoLogOutOutline, IoNotificationsOutline, IoPersonOutline, IoSettingsOutline } from 'react-icons/io5';
 import { DetailsItem, LangBtn, Search, ThemeBtn } from '../../../Components';
 import { MdSearch } from 'react-icons/md';
+import { FaUser } from 'react-icons/fa';
 import './SidebarContent.css';
 
 const SidebarContent = ({ clickEvent, setIsLoading }) => {
@@ -25,9 +25,19 @@ const SidebarContent = ({ clickEvent, setIsLoading }) => {
 
     return (
         <div className="sidebar-content">
-            <div className="sideHeader" onClick={clickEvent}>
-                <FaBars /> <span>LOGO</span>
-            </div>
+            <NavLink to={"/Profile"} className="sideHeader">
+                <div className="profilePhoto">
+                    <FaUser /> 
+                </div>
+                <div className="textWrapper">
+                    <span className='sideUsername'>
+                        Account Username
+                    </span>
+                    <span className='sideUserActivity'>
+                        VIP Member
+                    </span>
+                </div>
+            </NavLink>
 
 
             <div className="sideBody">
@@ -49,10 +59,10 @@ const SidebarContent = ({ clickEvent, setIsLoading }) => {
                         <IoHomeOutline />
                         <div className="name">{t("navbar.home")}</div>
                     </NavLink>
-                    <NavLink to={"/Profile"} className="sideItem">
+                    {/* <NavLink to={"/Profile"} className="sideItem">
                         <IoPersonOutline />
                         <div className="name">{t("navbar.profile")}</div>
-                    </NavLink>
+                    </NavLink> */}
                     <NavLink to={"/Notifications"} className="sideItem">
                         <IoNotificationsOutline  />
                         <div className="name">{t("navbar.notifications")}</div>

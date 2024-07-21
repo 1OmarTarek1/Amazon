@@ -3,10 +3,10 @@ import { NavLink } from 'react-router-dom';
 import Headroom from 'react-headroom';
 import { LangBtn, NavBtn, NavLinks, ProfileLink, Search } from '../../Components';
 import { MdSearchOff, MdSearch } from "react-icons/md";
-import { FaBell, FaCartShopping, FaHeart } from 'react-icons/fa6';
+import { FaBell, FaCartShopping, FaHeart, FaList } from 'react-icons/fa6';
 import './NavbarSec.css';
 
-const NavbarSec = ({isLoading, setIsLoading}) => {
+const NavbarSec = ({ isLoading, setIsLoading, toggleSidebar }) => {
   const [openNav, setOpenNav] = useState(false);
   const [mobMedia, setMobMedia] = useState(false);
   const [search, setSearch] = useState(false);
@@ -109,50 +109,49 @@ const NavbarSec = ({isLoading, setIsLoading}) => {
     <Headroom>
       <nav className='navbarSec'>
         <div className="navContainer">
-          {mobMedia && ( // Mobile Button && langBTn
-          <div className='navBtnBX' 
-          style={{display:"flex", alignItems:"center", gap:"15px"}}
-          >          
-            <NavBtn 
-              ref={navBtnRef} 
-              openNav={openNav} 
-              setOpenNav={setOpenNav} 
-              handleOpenNav={handleOpenNav} 
-            />
-            <LangBtn 
-            isLoading={isLoading} 
-            setIsLoading={setIsLoading}
-            />
-          </div>
-          )}
 
-          {/* LangBtn & LOGO & Search-Icon */}
+          {/*SideBtn & NavBtn & LangBtn & LOGO & Search-Icon */}
           <div 
-          className="logoBX d-flex gap-1"
-          style={{alignItems:"center"}}
+          className="logoBX d-flex"
+          style={{alignItems:"center", gap:"5px"}}
           >
-
+            <div 
+            className="sideBtn"
+            onClick={toggleSidebar}
+            >
+              <FaList />
+            </div>
+            
             <NavLink to='/' className="logo clsLink">
               <span>LOGO</span>
             </NavLink>
 
-            <div
-                className = { search ? "icnWrapperSrch active" : "icnWrapperSrch" }
-                onClick={handleOpenSearch}
-                ref={searchIconRef}
-              >
-                {search 
-                  ? <MdSearchOff />
-                  : <MdSearch />
-                }
-            </div>
+            {mobMedia && (
+              <NavBtn 
+                ref={navBtnRef} 
+                openNav={openNav} 
+                setOpenNav={setOpenNav} 
+                handleOpenNav={handleOpenNav} 
+              />
+            )} 
 
-            {!mobMedia && (
               <LangBtn 
               isLoading={isLoading} 
               setIsLoading={setIsLoading}
               />
-            )}
+
+              {!mobMedia && (
+                <div
+                    className = { search ? "icnWrapperSrch active" : "icnWrapperSrch" }
+                    onClick={handleOpenSearch}
+                    ref={searchIconRef}
+                  >
+                    {search 
+                      ? <MdSearchOff />
+                      : <MdSearch />
+                    }
+                </div>
+              )}
           </div>
 
 
@@ -163,11 +162,25 @@ const NavbarSec = ({isLoading, setIsLoading}) => {
           )}
 
 
-          {/* Profile-Link & Notifications & Shope-cart & Favorites */}
+          {/* Profile-Link & Notifications & Shope-cart & Favorites & Search-Icon */}
           <div 
             className="navIcnWrapper" 
             style={{justifyContent:"center", alignItems:"center"}}
           >
+
+            {mobMedia && (
+              <div
+                  className = { search ? "icnWrapperSrch active" : "icnWrapperSrch" }
+                  onClick={handleOpenSearch}
+                  ref={searchIconRef}
+                >
+                  {search 
+                    ? <MdSearchOff />
+                    : <MdSearch />
+                  }
+              </div>
+            )}
+
             <NavLink 
             className="navProfIcon HeartIcn" 
             to={"/Favorites"}
@@ -195,19 +208,17 @@ const NavbarSec = ({isLoading, setIsLoading}) => {
         </div>
 
 
-        {!mobMedia &&( // PC Search
-          <div className="searchPcWrapper">
-            <Search 
-              searchValue={searchValue} 
-              setSearchValue={setSearchValue} 
-              cla={search 
-                    ? 'search pcSearch opened' 
-                    : 'search pcSearch'
-              }
-              id={"pcSearch"}
-            />
-          </div>
-        )}
+        <div className="searchPcWrapper">
+          <Search 
+            searchValue={searchValue} 
+            setSearchValue={setSearchValue} 
+            cla={search 
+                  ? 'search pcSearch opened' 
+                  : 'search pcSearch'
+            }
+            id={"pcSearch"}
+          />
+        </div>
 
         {mobMedia && ( // Mobile NavLinks
           <ul className={ openNav ? ("navLinks navMob opened") : ("navLinks") }>
