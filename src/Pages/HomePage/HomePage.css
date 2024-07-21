@@ -6,7 +6,7 @@
 .MAIN-WRAPPER:has(.homePage) 
 .headroom--unfixed .navbarSec 
 .navContainer::before {
-    border: 1px solid #ffffff15;
+    border: none;
 }
 
 .MAIN-WRAPPER:has(.homePage) 
@@ -24,7 +24,7 @@
 }
 .MAIN-WRAPPER:has(.homePage)
  .headroom--unfixed {
-    padding: 10px;
+    /* padding: 10px; */
     transition: var(--transition-main);
 }
 .MAIN-WRAPPER:has(.homePage)

@@ -126,32 +126,21 @@ const NavbarSec = ({ isLoading, setIsLoading, toggleSidebar }) => {
               <span>LOGO</span>
             </NavLink>
 
-            {mobMedia && (
-              <NavBtn 
-                ref={navBtnRef} 
-                openNav={openNav} 
-                setOpenNav={setOpenNav} 
-                handleOpenNav={handleOpenNav} 
-              />
-            )} 
-
               <LangBtn 
               isLoading={isLoading} 
               setIsLoading={setIsLoading}
               />
 
-              {!mobMedia && (
-                <div
-                    className = { search ? "icnWrapperSrch active" : "icnWrapperSrch" }
-                    onClick={handleOpenSearch}
-                    ref={searchIconRef}
-                  >
-                    {search 
-                      ? <MdSearchOff />
-                      : <MdSearch />
-                    }
-                </div>
-              )}
+              <div
+                  className = { search ? "icnWrapperSrch active" : "icnWrapperSrch" }
+                  onClick={handleOpenSearch}
+                  ref={searchIconRef}
+                >
+                  {search 
+                    ? <MdSearchOff />
+                    : <MdSearch />
+                  }
+              </div>
           </div>
 
 
@@ -167,19 +156,6 @@ const NavbarSec = ({ isLoading, setIsLoading, toggleSidebar }) => {
             className="navIcnWrapper" 
             style={{justifyContent:"center", alignItems:"center"}}
           >
-
-            {mobMedia && (
-              <div
-                  className = { search ? "icnWrapperSrch active" : "icnWrapperSrch" }
-                  onClick={handleOpenSearch}
-                  ref={searchIconRef}
-                >
-                  {search 
-                    ? <MdSearchOff />
-                    : <MdSearch />
-                  }
-              </div>
-            )}
 
             <NavLink 
             className="navProfIcon HeartIcn" 
@@ -204,6 +180,15 @@ const NavbarSec = ({ isLoading, setIsLoading, toggleSidebar }) => {
 
 
             <ProfileLink setIsLoading={setIsLoading}/>
+
+            {mobMedia && (
+              <NavBtn 
+                ref={navBtnRef} 
+                openNav={openNav} 
+                setOpenNav={setOpenNav} 
+                handleOpenNav={handleOpenNav} 
+              />
+            )} 
           </div>
         </div>
 

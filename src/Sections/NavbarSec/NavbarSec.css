@@ -150,14 +150,7 @@
         height: unset;
         padding: 12px 20px;
     }
-    /*LOGO*/
-    /* .navbarSec .logoBX .logo{
-        display: none;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-    } */
+
 }
 @media screen and (max-width: 650px) {
     /*displays*/
@@ -166,5 +159,12 @@
     }
     .navbarSec .logoBX .langBtnWrapper{
         display: none;
+    }
+    /*LOGO*/
+    .navbarSec .logoBX .logo{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
     }
 }

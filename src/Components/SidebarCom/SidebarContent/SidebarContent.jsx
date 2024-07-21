@@ -2,10 +2,9 @@ import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import CategoryTitlesData  from '../../../Data/CategoryTitlesData'
-import { IoCartOutline, IoContrastOutline, IoEarth, IoHeartOutline, IoHomeOutline, IoLogOutOutline, IoNotificationsOutline, IoPersonOutline, IoSettingsOutline } from 'react-icons/io5';
+import { IoCartOutline, IoClose, IoContrastOutline, IoEarth, IoHeartOutline, IoHomeOutline, IoLogOutOutline, IoNotificationsOutline, IoPersonOutline, IoSettingsOutline } from 'react-icons/io5';
 import { DetailsItem, LangBtn, Search, ThemeBtn } from '../../../Components';
 import { MdSearch } from 'react-icons/md';
-import { FaUser } from 'react-icons/fa';
 import './SidebarContent.css';
 
 const SidebarContent = ({ clickEvent, setIsLoading }) => {
@@ -15,26 +14,28 @@ const SidebarContent = ({ clickEvent, setIsLoading }) => {
     const Data = CategoryTitlesData(t);
     const DetailsItems = Data.map(( item, index ) => {
         return <DetailsItem key={index}
-            id       = { index             }
-            gender   = { item.gender       }
-            text     = { item.category     }
-            links    = { item.items }
+            id          = { index             }
+            gender      = { item.gender       }
+            text        = { item.category     }
+            links       = { item.items        }
+            clickEvent  = { clickEvent        }
         />
     })
 
 
     return (
         <div className="sidebar-content">
-            <NavLink to={"/Profile"} className="sideHeader">
+            <NavLink to={"/Profile"} className="sideHeader"
+            onClick={clickEvent}>
                 <div className="profilePhoto">
-                    <FaUser /> 
+                    <IoPersonOutline /> 
                 </div>
                 <div className="textWrapper">
                     <span className='sideUsername'>
-                        Account Username
+                        {t("navbar.username")}
                     </span>
                     <span className='sideUserActivity'>
-                        VIP Member
+                        {t("navbar.usernameLevel")}
                     </span>
                 </div>
             </NavLink>
@@ -55,23 +56,35 @@ const SidebarContent = ({ clickEvent, setIsLoading }) => {
 
 
                 <div className="containerIt">
-                    <NavLink to={"/"} className="sideItem">
+                    <NavLink 
+                    to={"/"} 
+                    className="sideItem"
+                    onClick={clickEvent}
+                    >
                         <IoHomeOutline />
                         <div className="name">{t("navbar.home")}</div>
                     </NavLink>
-                    {/* <NavLink to={"/Profile"} className="sideItem">
-                        <IoPersonOutline />
-                        <div className="name">{t("navbar.profile")}</div>
-                    </NavLink> */}
-                    <NavLink to={"/Notifications"} className="sideItem">
+                    <NavLink 
+                    to={"/Notifications"} 
+                    className="sideItem"
+                    onClick={clickEvent}
+                    >
                         <IoNotificationsOutline  />
                         <div className="name">{t("navbar.notifications")}</div>
                     </NavLink>
-                    <NavLink to={"/MyShop"} className="sideItem">
+                    <NavLink 
+                    to={"/MyShop"} 
+                    className="sideItem"
+                    onClick={clickEvent}
+                    >
                         <IoCartOutline />
                         <div className="name">{t("navbar.shoppingCar")}</div>
                     </NavLink>
-                    <NavLink to={"/Favorites"} className="sideItem">
+                    <NavLink 
+                    to={"/Favorites"} 
+                    className="sideItem"
+                    onClick={clickEvent}
+                    >
                         <IoHeartOutline />
                         <div className="name">{t("navbar.favorites")}</div>
                     </NavLink>
@@ -91,14 +104,20 @@ const SidebarContent = ({ clickEvent, setIsLoading }) => {
                         
                         <div className="sideItem">
                             <IoEarth />
-                            <div className="name">
+                            <div className="name" >
                                 <span>{t("navbar.language")}</span>
-                                <LangBtn setIsLoading={setIsLoading} />
+                                <div className="" onClick={clickEvent}>
+                                    <LangBtn setIsLoading={setIsLoading} />
+                                </div>
                             </div>
                         </div>
 
 
-                        <NavLink to={"/Settings"} className="sideItem">
+                        <NavLink 
+                        to={"/Settings"} 
+                        className="sideItem"
+                        onClick={clickEvent}
+                        >
                             <IoSettingsOutline />
                             <div className="name">{t("navbar.settings")}</div>
                         </NavLink>
@@ -106,12 +125,22 @@ const SidebarContent = ({ clickEvent, setIsLoading }) => {
                 </div>
             </div>
 
-                <div className="Logout">
-                    <div className="sideItem">
-                        <IoLogOutOutline />
-                        <div className="name">{t("navbar.logout")}</div>
-                    </div>
+            <div className="Logout">
+                <div 
+                className="sideItem"
+                onClick={clickEvent}
+                >
+                    <IoLogOutOutline />
+                    <div className="name">{t("navbar.logout")}</div>
                 </div>
+                <div 
+                className="sideItem" 
+                onClick={clickEvent}
+                >
+                    <IoClose />
+                    <div className="name">{t("navbar.exit")}</div>
+                </div>
+            </div>
         </div>
     );
 };

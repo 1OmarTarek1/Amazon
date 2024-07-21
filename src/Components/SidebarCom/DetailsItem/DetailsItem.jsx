@@ -17,6 +17,7 @@ const DetailsItem = (props) => {
                 <NavLink
                     id={index}
                     to={link.path}
+                    onClick={props.clickEvent}
                 >
                     {link.title}
                 </NavLink>

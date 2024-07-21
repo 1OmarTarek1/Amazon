@@ -27,9 +27,7 @@
     border-radius: 5px;
     border: 1px solid var(--color-borderLight);
 }
-.sidebar .sideHeader .profilePhoto svg{
-    font-size: 18px;
-}
+
 .sidebar .sideHeader .sideUsername{
     font-size: 14px;
 }
@@ -94,8 +92,8 @@
 .sidebar .sideBody {
     flex: 1;
     margin-block: 10px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid var(--color-borderLight);
+    padding-block: 10px 5px;
+    border-block: 1px solid var(--color-borderLight);
     transition: var(--transition-main);
     overflow-y: scroll ;
 }
@@ -197,6 +195,10 @@ span {
 .sidebar .sideHeader.active {
     color: var(--color-primary);
     background-color: #ffffff1c;
+    border-color: var(--color-primary);
+}
+.sidebar .sideHeader.active .profilePhoto{
+    border-color: var(--color-primary);
 }
 
 .sidebar .sideItem:hover {

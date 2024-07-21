@@ -3,6 +3,8 @@
         "home": "الرئيسية",
         "shop": "المتجر",
         "profile":"حسابي",
+        "username":"اسم مستخدم الحساب",
+        "usernameLevel":"عميل مميز",
         "about": "حول",
         "products": "المنتجات",
         "notifications":"الاشعارات",
@@ -11,7 +13,8 @@
         "theme":"الوضع",
         "language":"اللغة",
         "settings":"الاعدادات",
-        "logout":"خروج"
+        "logout":"خروج",
+        "exit":"اغلاق"
     },
 
 

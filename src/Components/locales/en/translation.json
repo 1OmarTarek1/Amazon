@@ -3,6 +3,8 @@
         "home": "Home",
         "shop": "Shop",
         "profile":"Profile",
+        "username":"Account Username",
+        "usernameLevel":"VIP Member",
         "products": "Products",
         "about": "About",
         "notifications":"Notifications",
@@ -11,7 +13,8 @@
         "theme":"Theme",
         "language":"Language",
         "settings":"Settings",
-        "logout":"Logout"
+        "logout":"Logout",
+        "exit":"Exit"
     },
 
     
