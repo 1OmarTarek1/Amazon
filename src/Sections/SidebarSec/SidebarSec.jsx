@@ -24,7 +24,8 @@ const SidebarSec = ({ setIsLoading, toggleSidebar, isOpen, setIsOpen }) => {
     return () => {
       document.removeEventListener('mousedown', handleCloseSidebar);
     };
-  }, [isOpen]);
+  });
+  // , [isOpen]
 
   return (
     <>

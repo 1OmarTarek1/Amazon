@@ -152,6 +152,7 @@
 
 /*lang btn*/
 .sidebar .sideItem .langBtnWrapper{
+    height: auto;
     padding-inline: 0px;
     margin-inline: 0px;
     border: none;
