@@ -152,14 +152,24 @@
     }
 
 }
+@media screen and (max-width: 768px) {
+    .navbarSec .navIcnWrapper .icnWrapperSrch{
+        display: none;
+    }
+}
 @media screen and (max-width: 650px) {
     /*displays*/
     .navbarSec .navProfIcon{
         display: none;
     }
-    .navbarSec .logoBX .langBtnWrapper{
+    .navbarSec .navIcnWrapper .icnWrapperSrch{
+        display: grid;
+        place-content: center;
+    }
+    .navbarSec .logoBX .themWrapper{
         display: none;
     }
+    
     /*LOGO*/
     .navbarSec .logoBX .logo{
         position: absolute;
@@ -167,4 +177,13 @@
         top: 50%;
         transform: translate(-50%, -50%);
     }
+}
+@media screen and (max-width: 360px) {
+    /*displays*/
+    .navbarSec .logoBX .langBtnWrapper{
+        display: none;
+    }
+    .navbarSec .navIcnWrapper .icnWrapperSrch{
+        display: none;
+    } 
 }
