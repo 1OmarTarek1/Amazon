@@ -90,7 +90,6 @@ import OtherGO from '../Assets/Images/Girls/Other.jpg';
 
 
 
-// const { t } = useTranslation();
 
 const CategoryTitlesData = (t) => {
     return [

@@ -15,6 +15,8 @@ export { default as BoysPage } from './ProductsPages/BoysPage/BoysPage'
 export { default as GirlsPage } from './ProductsPages/GirlsPage/GirlsPage'
 
 
-// Men Pages
-export { default as PantsPage } from './ProductsPages/MenPage/PantsPage/PantsPage'
+
+
+
+
 

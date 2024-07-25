@@ -32,6 +32,7 @@
     display: grid;
     place-content: center;
     transition: var(--transition-main);
+
 }
 .carouselItem .imgWrapper img{
     width: 100%;
