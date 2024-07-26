@@ -28,6 +28,8 @@
     --bg-component          : #27292a;
     --bg-nested             : #3f3f3fde;
     --color-borderLight     : #ffffff1f;
+    --color-borderSecLight  : #ffffff11;
+
 
     /* Font Colors */
     --font-mainColor        : #E0E0E0;
@@ -55,6 +57,7 @@
     --bg-section            : #ffffffef;
     --bg-component          : #fff;
     --color-borderLight     : #ffffff1f;
+    --color-borderSecLight  : rgba(36, 32, 32, 0.13);
     --bg-Brightness         : rgba(0, 0, 0, 0.322);
 
 

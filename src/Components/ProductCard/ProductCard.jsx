@@ -114,7 +114,7 @@ const ProductCard = ({ product }) => {
                     className="footBtn add-to-cart-button"
                     style={{
                         flex:"4",
-                        borderInline:"1px solid var(--color-borderLight)"
+                        borderInline:"1px solid var(--color-borderSecLight)"
                     }}
                     onClick={handleAddToCart}
                 >
