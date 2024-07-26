@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Amazon/static/css/main.fac75d21.css",
-    "main.js": "/Amazon/static/js/main.bfcb6da0.js",
+    "main.css": "/Amazon/static/css/main.caeaf964.css",
+    "main.js": "/Amazon/static/js/main.a1e1883b.js",
     "static/media/fa-solid-900.ttf": "/Amazon/static/media/fa-solid-900.bacd5de623fb563b961a.ttf",
     "static/media/background.jpg": "/Amazon/static/media/background.2b919db2dc1512828d8b.jpg",
     "static/media/fa-brands-400.ttf": "/Amazon/static/media/fa-brands-400.60127e352b7a11f7f1bc.ttf",
@@ -17,11 +17,14 @@
     "static/media/plusWT.jpg": "/Amazon/static/media/plusWT.386e14617052e7ab9fc1.jpg",
     "static/media/dressesWT.jpg": "/Amazon/static/media/dressesWT.99a4798982e4f6e39101.jpg",
     "static/media/nikeWSh.jpg": "/Amazon/static/media/nikeWSh.d987498da51330be90fa.jpg",
+    "static/media/boys.jpg": "/Amazon/static/media/boys.dba49867b4ef92a72cf2.jpg",
     "static/media/fa-brands-400.woff2": "/Amazon/static/media/fa-brands-400.455ea818179b4def0c43.woff2",
     "static/media/adidasMT.jpg": "/Amazon/static/media/adidasMT.29a6381410d51932ca6f.jpg",
+    "static/media/women.jpg": "/Amazon/static/media/women.b8517eb9f700fa77dc62.jpg",
     "static/media/classicMSh.jpg": "/Amazon/static/media/classicMSh.f1a2f28c5418b4ef0aaa.jpg",
     "static/media/Other.jpg": "/Amazon/static/media/Other.4af6e01775244d09e7bc.jpg",
     "static/media/T_Shirts.jpg": "/Amazon/static/media/T_Shirts.48556ce42b7bcc83b9a2.jpg",
+    "static/media/men.jpg": "/Amazon/static/media/men.3cbf7e2363f5e7c2859b.jpg",
     "static/media/bagsMO.jpg": "/Amazon/static/media/bagsMO.63c5d334e52603e0620a.jpg",
     "static/media/over_sizeMP.jpg": "/Amazon/static/media/over_sizeMP.74afa8cbd6a3c8d816df.jpg",
     "static/media/adidasMP.jpg": "/Amazon/static/media/adidasMP.b9b15a57b075fb1dc410.jpg",
@@ -44,6 +47,7 @@
     "static/media/basicWT.jpg": "/Amazon/static/media/basicWT.9757ae394a45c0c4daef.jpg",
     "static/media/basicWSh.jpg": "/Amazon/static/media/basicWSh.9ac12b1b507c0802f7b5.jpg",
     "static/media/fa-regular-400.ttf": "/Amazon/static/media/fa-regular-400.eb91f7b948a42799f678.ttf",
+    "static/media/girls.jpg": "/Amazon/static/media/girls.d405c350dd0e177979a0.jpg",
     "static/media/nikeWT.jpg": "/Amazon/static/media/nikeWT.07ff87df2d53db6369b9.jpg",
     "static/media/basicMT.jpg": "/Amazon/static/media/basicMT.3cbae3ceab8481c37dba.jpg",
     "static/media/capsMO.jpg": "/Amazon/static/media/capsMO.c1f92918556ad0c5ba99.jpg",
@@ -60,11 +64,11 @@
     "static/media/slick.ttf": "/Amazon/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/Amazon/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Amazon/index.html",
-    "main.fac75d21.css.map": "/Amazon/static/css/main.fac75d21.css.map",
-    "main.bfcb6da0.js.map": "/Amazon/static/js/main.bfcb6da0.js.map"
+    "main.caeaf964.css.map": "/Amazon/static/css/main.caeaf964.css.map",
+    "main.a1e1883b.js.map": "/Amazon/static/js/main.a1e1883b.js.map"
   },
   "entrypoints": [
-    "static/css/main.fac75d21.css",
-    "static/js/main.bfcb6da0.js"
+    "static/css/main.caeaf964.css",
+    "static/js/main.a1e1883b.js"
   ]
 }
