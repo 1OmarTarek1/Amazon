@@ -37,7 +37,6 @@ export { default as LangBtn } from './Buttons/LangBtn/LangBtn'
 
 // Pages Folder Components
 export { default as CategoryLayout } from './PagesLayout/CategoryLayout/CategoryLayout'
-export { default as HumansLayout } from './PagesLayout/HumansLayout/HumansLayout'
 
 export { default as ProductCard } from './ProductCard/ProductCard'
 

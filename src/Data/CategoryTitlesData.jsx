@@ -3,6 +3,7 @@
 
 // ======================= M-E-N ======================= //
 // Men Title Images
+import men from '../Assets/Images/Men/men.jpg'
 import T_Shirts from '../Assets/Images/Men/T_Shirts.jpg';
 import Pants from '../Assets/Images/Men/Pants.jpg';
 import Shoes from '../Assets/Images/Men/Shoes.jpg';
@@ -37,6 +38,7 @@ import AccessoryMO from '../Assets/Images/Men/accessoryMO.jpg';
 
 // ======================= W-O-M-E-N ======================= //
 // Women Title Images
+import women from '../Assets/Images/Women/women.jpg'
 import T_ShirtsWT from '../Assets/Images/Women/T_Shirts.jpg';
 import PantsWP from '../Assets/Images/Women/Pants.jpg';
 import ShoesWSh from '../Assets/Images/Women/Shoes.jpg';
@@ -72,6 +74,7 @@ import AccessoryWO from '../Assets/Images/Women/accessoryWO.jpg';
 
 // ======================= B-O-Y-S ======================= //
 // Boys Title Images
+import boys from '../Assets/Images/Boys/boys.jpg'
 import T_ShirtsBT from '../Assets/Images/Boys/T_Shirts.jpg';
 import PantsBP from '../Assets/Images/Boys/Pants.jpg';
 import ShoesBSh from '../Assets/Images/Boys/Shoes.jpg';
@@ -83,6 +86,7 @@ import OtherBO from '../Assets/Images/Boys/Other.jpg';
 
 // ======================= G-I-R-L-S ======================= //
 // Girls Title Images
+import girls from '../Assets/Images/Girls/girls.jpg'
 import T_ShirtsGT from '../Assets/Images/Girls/T_Shirts.jpg';
 import PantsGP from '../Assets/Images/Girls/Pants.jpg';
 import ShoesGSh from '../Assets/Images/Girls/Shoes.jpg';
@@ -98,6 +102,8 @@ const CategoryTitlesData = (t) => {
             gender: true,
             catPath: '/Products/Men',
             divClass:'MenCarousel',
+            imgTitle: t('categoryData.menCategory'),
+            img: men,
             items: [
                 {   
                     path: '/Products/Men/T-Shirts',
@@ -243,6 +249,8 @@ const CategoryTitlesData = (t) => {
             gender: false,
             catPath: '/Products/Women',
             divClass:'WomenCarousel',
+            imgTitle: t('categoryData.womenCategory'),
+            img: women,
             items: [
                 {
                     path: '/Products/Women/T-Shirts',
@@ -388,6 +396,8 @@ const CategoryTitlesData = (t) => {
             gender: true,
             catPath: '/Products/Boys',
             divClass:'BoysCarousel',
+            imgTitle: t('categoryData.boysCategory'),
+            img: boys,
             items: [
                 {   
                     path: '/Products/Boys/T-Shirts',
@@ -533,6 +543,8 @@ const CategoryTitlesData = (t) => {
             gender: false,
             catPath: '/Products/Girls',
             divClass:'GirlsCarousel',
+            imgTitle: t('categoryData.girlsCategory'),
+            img: girls,
             items: [
                 {   
                     path: '/Products/Girls/T-Shirts',
@@ -548,22 +560,22 @@ const CategoryTitlesData = (t) => {
                         {
                             title: "Dresses",
                             img: DressesWT,
-                            path:"/Products/Girls/T-Shirts#brandName4"
+                            path:"/Products/Girls/T-Shirts#Dresses"
                         },
                         {
                             title: "Basic",
                             img: BasicWT,
-                            path:"/Products/Girls/T-Shirts#brandName5"
+                            path:"/Products/Girls/T-Shirts#Basic"
                         },
                         {
                             title: "Adidas",
                             img: AdidasWT,
-                            path:"/Products/Girls/T-Shirts#brandName3"
+                            path:"/Products/Girls/T-Shirts#Adidas"
                         },
                         {
                             title: "Nike",
                             img: NikeWT,
-                            path:"/Products/Girls/Pants/Nike"
+                            path:"/Products/Girls/Pants#Nike"
                         }
                     ]
                 },

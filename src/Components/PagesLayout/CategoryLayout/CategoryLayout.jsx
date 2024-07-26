@@ -1,10 +1,13 @@
 import { Outlet } from 'react-router-dom';
+import './CategoryLayout.css';
 
-const CategoryLayout = () => (
-    <div>
-        {/* <h2>CategoryLayout</h2> */}
-        <Outlet />
-    </div>
-);
+
+const CategoryLayout = () => {
+    return (
+        <div className='categoryPage'>
+            <Outlet />
+        </div>
+    );
+};
 
 export default CategoryLayout;

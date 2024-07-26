@@ -2,6 +2,8 @@
     position: relative;
     height: calc(100vh);
     overflow: hidden;
+    max-width: 1440px;
+    margin-inline: auto;
   }
   
   .header-background {
@@ -32,6 +34,7 @@
     text-align: center;
     position: relative;
     z-index: 1;
+    
   }
   
   .text-content {

@@ -1,0 +1,41 @@
+.ProductPage .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    transition: var(--transition-main);
+}
+
+
+.filterBtns {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: var(--bg-component);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+.filterBtns .cont{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    overflow-x: scroll;
+}
+.filterBtns .cont::-webkit-scrollbar{
+    height: 0;
+}
+.filterBtns .filterBtn{
+    padding: 3px 20px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    font-size: 14px;
+    background-color: var(--bg-body);
+    color: var(--font-secondaryColor);
+    transition: var(--transition-main);
+}
+.filterBtns .filterBtn:hover{
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+

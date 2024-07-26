@@ -13,7 +13,7 @@ const DTitle = () => {
         // Capitalize the first letter of each word
         const capitalizedTitle = formattedTitle.replace(/\b\w/g, (match) => match.toUpperCase());
         // Set the title
-        document.title = title ? `Amazon - ${capitalizedTitle}` : 'Amazon - Home';
+        document.title = title ? `${capitalizedTitle} - Amazon` : 'Home - Amazon';
     }, [location.pathname]);
 
     return null;

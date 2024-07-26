@@ -9,10 +9,10 @@ export { default as SettingsPage } from './ProfilePages/SettingsPage/SettingsPag
 
 
 // Products Pages
-export { default as MenPage } from './ProductsPages/MenPage/MenPage'
-export { default as WomenPage } from './ProductsPages/WomenPage/WomenPage'
-export { default as BoysPage } from './ProductsPages/BoysPage/BoysPage'
-export { default as GirlsPage } from './ProductsPages/GirlsPage/GirlsPage'
+export { default as HumansPage } from './ProductsPages/HumansPage/HumansPage'
+export { default as ProductPage } from './ProductsPages/HumansPage/ProductPage/ProductPage'
+
+
 
 
 

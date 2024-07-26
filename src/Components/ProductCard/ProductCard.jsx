@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Slider from 'react-slick';
-import './ProductCard.css';
 import { FaCartShopping, FaEye, FaHeart } from 'react-icons/fa6';
+import './ProductCard.css';
 
 const ProductCard = ({ product }) => {
     const [selectedColor, setSelectedColor] = useState(null);
