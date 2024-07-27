@@ -1,29 +1,45 @@
-import { Outlet } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Outlet, useLocation } from 'react-router-dom';
 import TestData from '../../../../Data/TestData';
-import { MainContainer, ProductCard } from '../../../../Components';
+import { MainContainer, FilterButtonGroup, ProductList } from '../../../../Components';
 import './ProductPage.css';
-
 
 const ProductPage = () => {
     const products = TestData();
+    const [selectedFilter, setSelectedFilter] = useState(null);
+    const location = useLocation();
+
+    useEffect(() => {
+        const hash = location.hash.replace('#', '');
+        setSelectedFilter(hash || null);
+    }, [location]);
+
+    const handleFilterClick = (filter) => {
+        setSelectedFilter(filter);
+        const newHash = filter ? `#${filter}` : '';
+        if (newHash) {
+            window.history.pushState(null, '', newHash);
+        } else {
+            window.history.replaceState(null, '', window.location.pathname);
+        }
+    };
+
+    // Extract unique brands from products
+    const uniqueBrands = [...new Set(products.map(product => product.brand))];
+
+    const filteredProducts = selectedFilter
+        ? products.filter(product => product.brand === selectedFilter)
+        : products;
 
     return (
         <MainContainer>
-            <div className="filterBtns">
-                <div className="cont">
-                    <button className="filterBtn">Polo</button>
-                    <button className="filterBtn">Nike</button>
-                    <button className="filterBtn">Adidas</button>
-                    <button className="filterBtn">OverSize</button>
-                    <button className="filterBtn">Basic</button>
-                </div>
-            </div>
+            <FilterButtonGroup
+                uniqueBrands={uniqueBrands}
+                selectedFilter={selectedFilter}
+                onFilterClick={handleFilterClick}
+            />
             <div className="ProductPage">
-                <div className="cards">
-                    {products.map((product, index) => (
-                        <ProductCard key={index} product={product} />
-                    ))}
-                </div>
+                <ProductList products={filteredProducts} />
             </div>
             <Outlet />
         </MainContainer>

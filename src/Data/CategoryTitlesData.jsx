@@ -129,7 +129,7 @@ const CategoryTitlesData = (t) => {
                         {
                             title: "Over Size",
                             img: Over_SizeMT,
-                            path:"/Products/Men/T-Shirts#Over_Size"
+                            path:"/Products/Men/T-Shirts#OverSize"
                         },
                         {
                             title: "Basic",

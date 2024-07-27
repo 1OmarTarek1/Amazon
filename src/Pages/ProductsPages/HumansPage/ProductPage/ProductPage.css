@@ -2,6 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
     transition: var(--transition-main);
 }
 
@@ -39,3 +40,19 @@
     color: var(--color-primary);
 }
 
+.filterBtn.active {
+    background-color: var(--color-primary);
+    color: white; 
+}
+.filterBtn.active:hover {
+    color: white; 
+}
+
+
+
+
+/* @media screen and (max-width: 992px) {
+    .ProductPage .cards {
+        justify-content: flex-start;
+    }
+} */
