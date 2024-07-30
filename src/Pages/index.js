@@ -11,9 +11,7 @@ export { default as SettingsPage } from './ProfilePages/SettingsPage/SettingsPag
 // Products Pages
 export { default as HumansPage } from './ProductsPages/HumansPage/HumansPage'
 export { default as ProductPage } from './ProductsPages/HumansPage/ProductPage/ProductPage'
-
-
-
+export { default as DetailsPage } from './ProductsPages/DetailsPage/DetailsPage'
 
 
 

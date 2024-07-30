@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import Slider from 'react-slick';
 import { FaCartShopping, FaEye, FaHeart } from 'react-icons/fa6';
+import { useNavigate } from 'react-router-dom';
 import './ProductCard.css';
 
 const ProductCard = ({ product }) => {
     const [selectedColor, setSelectedColor] = useState(null);
     const [selectedSize, setSelectedSize] = useState(null);
+    const navigate = useNavigate();
 
     const handleColorChange = (color) => {
         setSelectedColor(color);
@@ -13,6 +15,18 @@ const ProductCard = ({ product }) => {
 
     const handleSizeChange = (size) => {
         setSelectedSize(size);
+    };
+
+    const handleAddToCart = () => {
+        if (!selectedColor || !selectedSize) {
+            alert('Please select both a color and a size.');
+            return;
+        }
+        // Logic for adding the product to the cart
+    };
+
+    const handleViewClick = () => {
+        navigate('/Products/ProductDetails', { state: { product } });
     };
 
     const renderColorButtons = () => {
@@ -26,20 +40,11 @@ const ProductCard = ({ product }) => {
                         style={{ backgroundColor: key }}
                         onClick={() => handleColorChange(key)}
                     >
-                        {/* {value} */}
                     </button>
                 );
             }
         });
         return colorButtons;
-    };
-
-    const handleAddToCart = () => {
-        if (!selectedColor || !selectedSize) {
-            alert('Please select both a color and a size.');
-            return;
-        }
-        // Logic for adding the product to the cart
     };
 
     const settings = {
@@ -65,12 +70,11 @@ const ProductCard = ({ product }) => {
                             alt={`${product.title} ${selectedColor || 'default'} Back`}
                         />
                     </Slider>
-                    <div className="btnsWrapper">                    
-                            {/* ❤️ */}
+                    <div className="btnsWrapper">
                         <button className="headBtn favorite-button">
                             <FaHeart />
                         </button>
-                        <button className="headBtn view-button">
+                        <button className="headBtn view-button" onClick={handleViewClick}>
                             <FaEye />
                         </button>
                     </div>
@@ -81,7 +85,7 @@ const ProductCard = ({ product }) => {
                     <span className="price">{product.sale}</span>
                     <span className="sale-price">{product.price}</span>
                 </p>
-                
+
                 <div className="product-details">
                     <div className="product-colors">
                         {renderColorButtons()}
@@ -98,7 +102,6 @@ const ProductCard = ({ product }) => {
                             </button>
                         ))}
                     </div>
-
                 </div>
 
                 <div className="product-actions">
@@ -113,11 +116,11 @@ const ProductCard = ({ product }) => {
                     </button>
                     <button
                         className="footBtn add-to-cart-button"
+                        onClick={handleAddToCart}
                         style={{
                             flex:"4",
                             borderInline:"1px solid var(--color-borderSecLight)"
                         }}
-                        onClick={handleAddToCart}
                     >
                         <FaCartShopping />
                         <span className='product-count'>0</span>
@@ -127,11 +130,9 @@ const ProductCard = ({ product }) => {
                         style={{
                             borderRadius:"0 0 3px 0"
                         }}
-                        // onClick={handleAddToCart}
                     >
                         +
                     </button>
-
                 </div>
             </div>
         </div>

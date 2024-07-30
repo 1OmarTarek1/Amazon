@@ -40,11 +40,16 @@ export { default as ProductList } from './ProductCardComponents/ProductList/Prod
 export { default as FilterButton } from './ProductCardComponents/FilterButton/FilterButton'
 export { default as ProductCard } from './ProductCardComponents/ProductCard/ProductCard'
 
+//Details page Components
+export { default as ProductTitleRating } from './DetailsPageComponents/ProductTitleRating/ProductTitleRating '
+export { default as ProductDetails } from './DetailsPageComponents/ProductDetails/ProductDetails'
+export { default as ActionWrapper } from './DetailsPageComponents/ActionWrapper/ActionWrapper'
 
 
 // Pages Folder Components
 export { default as CategoryLayout } from './PagesLayout/CategoryLayout/CategoryLayout'
 
+export { default as CustomReactStars } from './CustomReactStars/CustomReactStars'
 
 
 export { default as Loading } from './Loading/Loading'

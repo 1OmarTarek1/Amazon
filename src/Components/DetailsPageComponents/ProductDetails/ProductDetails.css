@@ -1,0 +1,243 @@
+.detailsPage .detailsWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    gap: 20px;
+}
+
+.detailsPage .detail {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-component);
+    border-radius: 8px;
+}
+
+.detailsPage .sideDet {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 30px;
+    flex: 1;
+    min-width: 300px;
+}
+
+.detailsPage .midDet {
+    flex: 2; 
+    min-width: 500px;
+}
+
+
+.detailsPage .product-images img{
+    border-radius: 2px;
+}
+.detailsPage .product-images{
+    border-radius: 8px;
+}
+
+ 
+.detailsPage .product-sizes h3 {
+    margin-bottom: 15px;
+}
+.detailsPage .color-button, 
+.detailsPage .size-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid var(--color-borderSecLight);
+    box-shadow: var(--mainShadow);
+    font-size: 11px;
+    font-weight: 400;
+    background-color: var(--bg-body);
+    color: var(--font-secondaryColor);
+    transition: var(--transition-main);
+    cursor: pointer;
+}
+.detailsPage .color-button{
+    width: 32px;
+    height: 32px;
+}
+
+.detailsPage .color-button:hover, 
+.detailsPage .size-button:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15), 0 16px 24px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+    border-color: var(--color-primary);
+    color: var(--font-mainColor);
+}
+.detailsPage .color-button.selected, 
+.detailsPage .size-button.selected {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15), 0 16px 24px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+    border-color: var(--color-primary);
+    color: var(--font-mainColor);
+}
+
+
+.detailsPage .barnd{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    gap: 85px;
+}
+.detailsPage .priceWrapper{
+    display: flex;
+    gap: 95px;
+    align-items: center;
+    font-size: 20px;
+}
+.detailsPage .sale{
+    margin-inline: 5px;
+    font-size: 17px;
+    color: red;
+    text-decoration: line-through;
+}
+
+
+
+
+
+
+
+.detailsPage .CommentsWrapper{
+    position: relative;
+    padding-block: 10px;
+    border-radius: 5px;
+    background-color: var(--bg-body);
+} 
+
+.detailsPage 
+.product-review textarea {
+    resize: none;
+    width: calc(100% - 20px);
+    height: 42.5px;
+    font-size: 13px;
+    padding: 10px;
+    padding-inline: 10px 35px;
+    margin-inline: 10px;
+    margin-bottom: 10px;
+    color: var(--font-secondaryColor);
+    background-color: var(--bg-component);
+    border: 1px solid var(--color-borderSecLight);
+    border-radius: 5px;
+    transition: var(--transition-main);
+}
+.detailsPage 
+.product-review textarea:focus {
+    outline: none;
+    height: 100px;
+    border-color: var(--color-primary);
+}
+
+.detailsPage 
+.product-review button {
+    position: absolute;
+    top: 6px;
+    right: -23px;
+    transform: translateX(-130%);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--color-borderSecLight);
+    border-radius: 3px;
+    background-color: var(--bg-component);
+    color: var(--font-secondaryColor);
+    font-size: 12px;
+    cursor: pointer;
+    transition: var(--transition-main);
+}
+
+.detailsPage 
+.product-review button:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.detailsPage 
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+.detailsPage .submitted-comments{
+    height: 350px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.detailsPage .submitted-comments::-webkit-scrollbar{
+    width: 2px;
+}
+.detailsPage .submitted-comments::-webkit-scrollbar-track{
+    background-color: var(--bg-body);
+}
+
+.detailsPage 
+.comment {
+    margin-inline: 10px;
+    position: relative;
+    border: 1px solid var(--color-borderSecLight);
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.detailsPage 
+.comment p {
+    margin-block: 10px 0px;
+    padding-left: 4px;
+    font-size: 13px;
+    line-height: 1.2rem;
+    color: var(--font-secondaryColor);
+}
+
+.detailsPage .btnWrappers{
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: flex-end;
+} 
+.detailsPage 
+.comment button {
+    margin-right: 10px;
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    font-size: 11px;
+    background-color: var(--bg-body);
+    border: 1px solid var(--color-borderSecLight);
+    color: var(--font-secondaryColor);
+    cursor: pointer;
+    transition: var(--transition-main);
+}
+.comment button svg{
+    position: relative;
+    top: -1px;
+    left: -.5px;
+}
+
+.detailsPage 
+.comment button:hover {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+
+
+@media screen and ( max-width: 550px ) {
+    .detailsPage .midDet {
+        flex: 1; 
+        min-width: 100%;
+    }
+    .detailsPage .sideDet {
+        min-width: 100%;
+    }
+}

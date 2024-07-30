@@ -1,0 +1,14 @@
+/*bottom Page*/
+.detailsPage .actionWrapper{
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    background-color: var(--bg-component);
+    overflow: hidden;
+}
+.detailsPage .actionWrapper button{
+    border: none;
+    padding: 15px;
+    color: var(--font-mainCcolor);
+    background-color: var(--bg-component);
+}

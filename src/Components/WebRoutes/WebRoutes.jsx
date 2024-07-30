@@ -7,7 +7,8 @@ import {
     FavoritesPage,
     SettingsPage,
     HumansPage,
-    ProductPage
+    ProductPage,
+    DetailsPage
 } from '../../Pages';
 
 import { CategoryLayout } from '../../Components';
@@ -52,6 +53,7 @@ const WebRoutes = () => {
                 <Route path="/Products/Girls/Other" element={<ProductPage />} />
             {/* Products Pages */}
 
+            <Route path="/Products/ProductDetails" element={<DetailsPage />} />
 
             <Route 
             path="*" 

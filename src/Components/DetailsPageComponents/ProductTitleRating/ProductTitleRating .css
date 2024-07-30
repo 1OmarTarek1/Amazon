@@ -1,0 +1,11 @@
+/* topPage */
+.detailsPage .detTitle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: var(--bg-component);
+    font-size: 1.5rem;
+    font-weight: 600;
+}

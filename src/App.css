@@ -45,6 +45,7 @@
     --distance-main         : 75px;
     --margin-main           : calc(var(--distance-main) - ( var(--distance-main) / 2 ));
     --padding-main          : calc(var(--distance-main) - ( var(--distance-main) / 3 ));
+    --mainShadow            : 0 4px 6px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Define light mode variables */
