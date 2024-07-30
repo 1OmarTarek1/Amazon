@@ -28,7 +28,7 @@
 
 
 .detailsPage .product-images img{
-    border-radius: 2px;
+    border-radius: 8px;
 }
 .detailsPage .product-images{
     border-radius: 8px;
@@ -151,6 +151,12 @@
     cursor: pointer;
     transition: var(--transition-main);
 }
+html[dir="rtl"] .detailsPage 
+.product-review button{
+ right: unset;
+ left: 0px;
+ transform: translateX(55%);
+}
 
 .detailsPage 
 .product-review button:hover {
@@ -187,11 +193,12 @@
     border-radius: 5px;
 }
 
+
 .detailsPage 
 .comment p {
-    margin-block: 10px 0px;
+    margin-block: 5px 12px;
     padding-left: 4px;
-    font-size: 13px;
+    font-size: 12px;
     line-height: 1.2rem;
     color: var(--font-secondaryColor);
 }
@@ -212,12 +219,17 @@
     height: 27px;
     border-radius: 50%;
     font-size: 11px;
-    background-color: var(--bg-body);
+    background-color: transparent;
     border: 1px solid var(--color-borderSecLight);
     color: var(--font-secondaryColor);
     cursor: pointer;
     transition: var(--transition-main);
 }
+html[dir="rtl"] .detailsPage 
+.btnWrappers{
+    left: 10px;
+} 
+
 .comment button svg{
     position: relative;
     top: -1px;
@@ -228,6 +240,7 @@
 .comment button:hover {
     color: var(--color-primary);
     border-color: var(--color-primary);
+    background-color: var(--bg-body);
 }
 
 

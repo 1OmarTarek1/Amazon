@@ -5,6 +5,7 @@
         "profile":"حسابي",
         "username":"اسم مستخدم الحساب",
         "usernameLevel":"عميل مميز",
+        "usernameLevel2":"عميل",
         "about": "حول",
         "products": "المنتجات",
         "notifications":"الاشعارات",
@@ -40,7 +41,17 @@
     },
 
     "placeholders": {
-        "search" : "بحث..."
+        "search" : "بحث...",
+        "comment": "اكتب تقييمك هنا..."
+    },
+
+
+    "productDetails": {
+        "size" : "المقاس",
+        "brand": "الماركة",
+        "price": "السعر",
+        "color": "اللون",
+        "review": "قييم المنتج"
     }
     
 }

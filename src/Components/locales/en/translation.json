@@ -5,6 +5,7 @@
         "profile":"Profile",
         "username":"Account Username",
         "usernameLevel":"VIP Member",
+        "usernameLevel2":"Member",
         "products": "Products",
         "about": "About",
         "notifications":"Notifications",
@@ -40,6 +41,16 @@
     },
 
     "placeholders": {
-        "search" : "Search..."
+        "search" : "Search...",
+        "comment": "Write your review..."
+    },
+
+
+    "productDetails": {
+        "size" : "Size",
+        "brand": "Brand",
+        "price": "Price",
+        "color": "Color",
+        "review": "Leave a review"
     }
 }

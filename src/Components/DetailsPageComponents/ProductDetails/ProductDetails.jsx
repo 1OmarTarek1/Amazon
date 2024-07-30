@@ -1,27 +1,73 @@
 import { CustomReactStars } from '../../../Components';
 import Slider from 'react-slick';
+import { useTranslation } from 'react-i18next';
 import { FaArrowRight, FaBan, FaCheck, FaUser } from 'react-icons/fa6';
 import { FaEdit, FaTrashAlt } from 'react-icons/fa';
 import './ProductDetails.css';
+// import { dir } from 'i18next';
 
-const ProductDetails = ({ product, selectedColor, setSelectedColor, selectedSize, setSelectedSize, settings, comments, editingIndex, rating, handleRatingChange, comment, handleCommentChange, handleReviewSubmit, errorMessage, handleEdit, handleDelete, starsKey, hasReviewed, renderColorButtons, renderSizeButtons }) => {
+const ProductDetails = ({ 
+    product, 
+    selectedColor, 
+    setSelectedColor, 
+    selectedSize, 
+    setSelectedSize, 
+    settings, 
+    comments, 
+    editingIndex, 
+    rating, 
+    handleRatingChange, 
+    comment,
+    handleCommentChange, 
+    handleReviewSubmit, 
+    errorMessage, 
+    handleEdit, 
+    handleDelete, 
+    starsKey, 
+    hasReviewed, 
+    renderColorButtons, 
+    renderSizeButtons 
+    }) => {
+    const { t } = useTranslation();
+
+    const isArabic = (text) => {
+        const arabicPattern = /[\u0600-\u06FF]/;
+        return arabicPattern.test(text);
+    };
+    
+    const getCommentStyle = (text) => ({
+        float: isArabic(text) ? 'right' : 'left',
+    });
+
+    // const getTextareaStyle = (text) => {
+    //     if (isArabic(text) && dir === "ltr") {
+    //         return { paddingInline: '40px 15px' };
+    //     } 
+    //     else if ( !isArabic(text) && dir === "rtl") {
+    //         return { paddingInline: '15px 40px' };
+    //     }
+    // };
+    
+
     return (
         <div className="detailsWrapper">
             <div className="detail sideDet">
                 <div className="product-sizes">
-                    <h3>Size</h3>
+                    <h3>{t('productDetails.size')}</h3>
                     <div className="d-flex gap-2" >
                         {renderSizeButtons()}
                     </div>
                 </div>
 
                 <div className="barnd">
-                    <span>Brand</span>
+                    <span>
+                        {t("productDetails.brand")}
+                    </span>
                     {product.brand}
                 </div>
 
                 <div className='priceWrapper'>
-                    Price 
+                    {t("productDetails.price")} 
                     <div className="">
                         {product.price}
                         <span className='sale'>
@@ -31,7 +77,7 @@ const ProductDetails = ({ product, selectedColor, setSelectedColor, selectedSize
                 </div>
 
                 <div className="product-sizes">
-                    <h3>Color</h3>
+                    <h3>{t("productDetails.color")}</h3>
                     <div className="d-flex gap-2" >
                         {renderColorButtons()}
                     </div>
@@ -55,7 +101,7 @@ const ProductDetails = ({ product, selectedColor, setSelectedColor, selectedSize
 
             <div className="detail sideDet gap-0" >
                 <div className="product-rating">
-                    <h4>Leave a review</h4>
+                    <h4>{t("productDetails.review")}</h4>
                     { ( comments.length === 0 || editingIndex !== null ) && (
                         <CustomReactStars
                             key={starsKey}
@@ -71,28 +117,30 @@ const ProductDetails = ({ product, selectedColor, setSelectedColor, selectedSize
                 <div className="CommentsWrapper">
                     <div className="product-review">
 
-                        <form 
+                    <form 
                         onSubmit={handleReviewSubmit}
-                        style={{position:"relative"}}
-                        >
-                            <textarea
-                                id='comment'
-                                value={comment}
-                                onChange={handleCommentChange}
-                                placeholder="Write your review here..."
-                                rows="4"
-                                disabled={hasReviewed && editingIndex === null}
-                            />
-                            <button 
+                        style={{ position: "relative" }}
+                    >
+                        <textarea
+                            id='comment'
+                            value={comment}
+                            onChange={handleCommentChange}
+                            placeholder={t("placeholders.comment")}
+                            rows="4"
+                            disabled={hasReviewed && editingIndex === null}
+                            // dir={isArabic(comment) ? 'rtl' : 'ltr'}
+                            // style={getTextareaStyle(comment)}
+                        />
+                        <button 
                             type="submit" 
                             disabled={hasReviewed && editingIndex === null}
-                            >
-                                {editingIndex !== null ? <FaCheck /> : (hasReviewed ? <FaBan /> : <FaArrowRight />)}                                
-                            </button>
-                        </form>
+                        >
+                            {editingIndex !== null ? <FaCheck /> : (hasReviewed ? <FaBan /> : <FaArrowRight />)}                                
+                        </button>
+                    </form>
+
                         {errorMessage && <p className="error-message">{errorMessage}</p>}
                     </div>
-
 
                     <div className="submitted-comments">
                         {comments.length === 0 ? (
@@ -118,7 +166,7 @@ const ProductDetails = ({ product, selectedColor, setSelectedColor, selectedSize
                                                     width:"40px",
                                                     height:"40px",
                                                     borderRadius:"3px",
-                                                    border:"1px solid var(--color-borderLight)",
+                                                    border:"1px solid var(--color-borderSecLight)",
                                                     fontSize:"18px"
                                                 }}>
                                                     <FaUser />
@@ -136,7 +184,7 @@ const ProductDetails = ({ product, selectedColor, setSelectedColor, selectedSize
                                                     style={{
                                                         fontSize:"11px",
                                                         color:"var(--font-secondaryColor)"
-                                                    }}>VIP</span>
+                                                    }}>{t("navbar.usernameLevel")}</span>
                                                 </div>
                                             </div>
                                             <CustomReactStars
@@ -147,16 +195,16 @@ const ProductDetails = ({ product, selectedColor, setSelectedColor, selectedSize
                                                 activeColor="#ffd700"
                                             />
                                         </div>
-                                        <p className='commented'>
+                                        <p 
+                                            className='commented'
+                                            dir={isArabic(comment.text) ? 'rtl' : 'ltr'}
+                                            style={getCommentStyle(comment.text)}
+                                        >
                                             {comment.text}
                                         </p>
                                         <div className="btnWrappers">
                                             <button onClick={() => handleEdit(index)}>
-                                                <FaEdit 
-                                                style={{
-                                                    position:"relative",
-                                                    left:"1px",
-                                                }}/>
+                                                <FaEdit />
                                             </button>
                                             <button onClick={() => handleDelete(index)}>
                                                 <FaTrashAlt />
@@ -184,7 +232,7 @@ const ProductDetails = ({ product, selectedColor, setSelectedColor, selectedSize
                                         width:"40px",
                                         height:"40px",
                                         borderRadius:"3px",
-                                        border:"1px solid var(--color-borderLight)",
+                                        border:"1px solid var(--color-borderSecLight)",
                                         fontSize:"18px"
                                     }}>
                                         <FaUser />
@@ -202,7 +250,7 @@ const ProductDetails = ({ product, selectedColor, setSelectedColor, selectedSize
                                         style={{
                                             fontSize:"11px",
                                             color:"var(--font-secondaryColor)"
-                                        }}>Member</span>
+                                        }}>{t("navbar.usernameLevel2")}</span>
                                     </div>
                                 </div>
                                 <CustomReactStars
@@ -213,7 +261,11 @@ const ProductDetails = ({ product, selectedColor, setSelectedColor, selectedSize
                                     activeColor="#ffd700"
                                 />
                             </div>
-                            <p className='commented'>
+                            <p 
+                                className='commented'
+                                dir={'ltr'}
+                                style={getCommentStyle(comment.text)}
+                            >
                                 Nice Product I hope if there is yellow color.
                             </p>
                         </div>
@@ -234,7 +286,7 @@ const ProductDetails = ({ product, selectedColor, setSelectedColor, selectedSize
                                         width:"40px",
                                         height:"40px",
                                         borderRadius:"3px",
-                                        border:"1px solid var(--color-borderLight)",
+                                        border:"1px solid var(--color-borderSecLight)",
                                         fontSize:"18px"
                                     }}>
                                         <FaUser />
@@ -252,7 +304,7 @@ const ProductDetails = ({ product, selectedColor, setSelectedColor, selectedSize
                                         style={{
                                             fontSize:"11px",
                                             color:"var(--font-secondaryColor)"
-                                        }}>Member</span>
+                                        }}>{t("navbar.usernameLevel2")}</span>
                                     </div>
                                 </div>
                                 <CustomReactStars
@@ -263,7 +315,11 @@ const ProductDetails = ({ product, selectedColor, setSelectedColor, selectedSize
                                     activeColor="#ffd700"
                                 />
                             </div>
-                            <p className='commented'>
+                            <p 
+                                className='commented'
+                                dir={'ltr'}
+                                style={getCommentStyle(comment.text)}
+                            >
                                 Not Bad Maybe I will buy in another time.
                             </p>
                         </div>
@@ -284,7 +340,7 @@ const ProductDetails = ({ product, selectedColor, setSelectedColor, selectedSize
                                         width:"40px",
                                         height:"40px",
                                         borderRadius:"3px",
-                                        border:"1px solid var(--color-borderLight)",
+                                        border:"1px solid var(--color-borderSecLight)",
                                         fontSize:"18px"
                                     }}>
                                         <FaUser />
@@ -302,7 +358,7 @@ const ProductDetails = ({ product, selectedColor, setSelectedColor, selectedSize
                                         style={{
                                             fontSize:"11px",
                                             color:"var(--font-secondaryColor)"
-                                        }}>Member</span>
+                                        }}>{t("navbar.usernameLevel2")}</span>
                                     </div>
                                 </div>
                                 <CustomReactStars
@@ -313,7 +369,11 @@ const ProductDetails = ({ product, selectedColor, setSelectedColor, selectedSize
                                     activeColor="#ffd700"
                                 />
                             </div>
-                            <p className='commented'>
+                            <p 
+                                className='commented'
+                                dir={'ltr'}
+                                style={getCommentStyle(comment.text)}
+                            >
                                 I liked it, Simple and good colors. 
                             </p>
                         </div>
@@ -334,7 +394,7 @@ const ProductDetails = ({ product, selectedColor, setSelectedColor, selectedSize
                                         width:"40px",
                                         height:"40px",
                                         borderRadius:"3px",
-                                        border:"1px solid var(--color-borderLight)",
+                                        border:"1px solid var(--color-borderSecLight)",
                                         fontSize:"18px"
                                     }}>
                                         <FaUser />
@@ -352,7 +412,7 @@ const ProductDetails = ({ product, selectedColor, setSelectedColor, selectedSize
                                         style={{
                                             fontSize:"11px",
                                             color:"var(--font-secondaryColor)"
-                                        }}>Member</span>
+                                        }}>{t("navbar.usernameLevel2")}</span>
                                     </div>
                                 </div>
                                 <CustomReactStars
@@ -363,7 +423,11 @@ const ProductDetails = ({ product, selectedColor, setSelectedColor, selectedSize
                                     activeColor="#ffd700"
                                 />
                             </div>
-                            <p className='commented'>
+                            <p 
+                                className='commented'
+                                dir={'ltr'}
+                                style={getCommentStyle(comment.text)}
+                            >
                                 I liked it, Simple and good colors. 
                             </p>
                         </div>
@@ -376,3 +440,5 @@ const ProductDetails = ({ product, selectedColor, setSelectedColor, selectedSize
 };
 
 export default ProductDetails;
+
+

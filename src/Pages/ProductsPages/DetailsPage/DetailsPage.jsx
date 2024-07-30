@@ -25,6 +25,14 @@ const DetailsPage = () => {
         return <div>Product not found.</div>;
     }
 
+    const handleAddToCart = () => {
+        if (!selectedColor || !selectedSize) {
+            alert('Please select both a color and a size.');
+            return;
+        }
+        // Logic for adding the product to the cart
+    };
+
     const settings = {
         dots: true,
         infinite: true,
@@ -143,7 +151,7 @@ const DetailsPage = () => {
                         renderSizeButtons={renderSizeButtons}
                     />
                     
-                    <ActionWrapper />
+                    <ActionWrapper handleAddToCart={handleAddToCart} />
                 </div>
             </MainContainer>
         </div>
