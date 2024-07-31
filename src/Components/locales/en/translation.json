@@ -52,5 +52,14 @@
         "price": "Price",
         "color": "Color",
         "review": "Leave a review"
+    },
+
+
+    "favoritesPage": {
+        "favoritesTitle": "Favorites",
+        "deleteBtn": "Delete All",
+        "noDataYet": "No favorites yet.",
+        "confirmDeleteAll": "Are you sure you want to delete all products from your favorites?",
+        "noProductsToDelete": "No products to delete !"
     }
 }

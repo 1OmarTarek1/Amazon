@@ -32,6 +32,7 @@ export { default as DTitle } from './DTitle/DTitle'
 export { default as ToTopBtn } from './Buttons/ToTopBtn/ToTopBtn'
 export { default as ThemeBtn } from './Buttons/ThemeBtn/ThemeBtn'
 export { default as LangBtn } from './Buttons/LangBtn/LangBtn'
+export { default as LikeBtn } from './Buttons/LikeBtn/LikeBtn'
 
 
 //Product Card Components
@@ -45,6 +46,10 @@ export { default as ProductTitleRating } from './DetailsPageComponents/ProductTi
 export { default as ProductDetails } from './DetailsPageComponents/ProductDetails/ProductDetails'
 export { default as ActionWrapper } from './DetailsPageComponents/ActionWrapper/ActionWrapper'
 
+
+// export { default as ThemeProvider } from './ThemeProvider/ThemeProvider'
+//Favorites page Components
+// export { default as FavoritesContext } from './FavoritesPageComponents/FavoritesContext/FavoritesContext'
 
 // Pages Folder Components
 export { default as CategoryLayout } from './PagesLayout/CategoryLayout/CategoryLayout'

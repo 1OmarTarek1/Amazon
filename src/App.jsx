@@ -1,5 +1,3 @@
-import { I18nextProvider } from 'react-i18next';
-import { BrowserRouter as Router  } from 'react-router-dom';
 import i18n from './Components/i18n/i18n';
 import React, { useState, useEffect } from 'react';
 import AOS from 'aos';
@@ -29,13 +27,12 @@ const App = () => {
     const dir = i18n.language === 'ar' ? 'rtl' : 'ltr';
     document.documentElement.setAttribute('dir', dir); 
   });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   // [i18n.language]
   
 
   return (
-    <Router basename='Amazon'>
-    <I18nextProvider i18n={i18n}>
+    <>
       { isLoading
       ? (
         <Loading 
@@ -72,9 +69,7 @@ const App = () => {
           </>
       )
       }
-
-    </I18nextProvider>
-    </Router>
+    </>
   );
 }
 

@@ -1,0 +1,42 @@
+.btnsWrapper{
+    position: absolute;
+    top: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 5px;
+}
+.btnsWrapper .favorite-button {
+    padding: 0;
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid var(--color-primary);
+    background-color: #d69318d2;
+    color: #fff;
+}
+.btnsWrapper .favorite-button.active {
+    color: red; 
+    background-color: #fff;
+    border-color: red;
+    transition: var(--transition-main);
+}
+.btnsWrapper .favorite-button.active svg {
+    animation: ripple .5s ease-in-out;
+}
+@keyframes ripple {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.btnsWrapper .headBtn svg{
+    position: relative;
+    top: -1px;
+    font-size: 15px;
+}

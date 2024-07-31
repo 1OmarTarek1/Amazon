@@ -1,13 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import Slider from 'react-slick';
-import { FaCartShopping, FaEye, FaHeart } from 'react-icons/fa6';
+import { FaCartShopping, FaEye } from 'react-icons/fa6';
 import { useNavigate } from 'react-router-dom';
+import { FavoritesContext } from '../../../Components/FavoritesPageComponents/FavoritesContext/FavoritesContext'; 
+
 import './ProductCard.css';
+import { LikeBtn } from '../../../Components';
 
 const ProductCard = ({ product }) => {
     const [selectedColor, setSelectedColor] = useState(null);
     const [selectedSize, setSelectedSize] = useState(null);
     const navigate = useNavigate();
+    const { toggleFavorites, isFavorite } = useContext(FavoritesContext);
+    const [isFavorited, setIsFavorited] = useState(isFavorite(product.id));
 
     const handleColorChange = (color) => {
         setSelectedColor(color);
@@ -27,6 +32,11 @@ const ProductCard = ({ product }) => {
 
     const handleViewClick = () => {
         navigate('/Products/ProductDetails', { state: { product } });
+    };
+
+    const handleToggleFavorites = () => {
+        toggleFavorites(product);
+        setIsFavorited(!isFavorited);
     };
 
     const renderColorButtons = () => {
@@ -57,8 +67,8 @@ const ProductCard = ({ product }) => {
     };
 
     return (
-        <div className="cardWrapper" data-aos={"fade-up"}> 
-            <div className="product-card" >
+        <div className="cardWrapper" data-aos={"fade-up"} id={product.id}> 
+            <div className="product-card">
                 <div className="product-images">
                     <Slider {...settings}>
                         <img
@@ -71,9 +81,10 @@ const ProductCard = ({ product }) => {
                         />
                     </Slider>
                     <div className="btnsWrapper">
-                        <button className="headBtn favorite-button">
-                            <FaHeart />
-                        </button>
+                        <LikeBtn 
+                        handleToggleFavorites={handleToggleFavorites}
+                        isFavorited={isFavorited}
+                        />
                         <button className="headBtn view-button" onClick={handleViewClick}>
                             <FaEye />
                         </button>
@@ -140,4 +151,3 @@ const ProductCard = ({ product }) => {
 };
 
 export default ProductCard;
-

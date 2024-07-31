@@ -88,7 +88,7 @@
 
 
 
-.product-card .btnsWrapper{
+ .btnsWrapper{
     position: absolute;
     top: 5px;
     width: 100%;
@@ -96,18 +96,32 @@
     justify-content: space-between;
     padding-inline: 5px;
 }
-.product-card .btnsWrapper .headBtn{
+
+ .btnsWrapper .headBtn svg{
+    position: relative;
+    top: -1px;
+    font-size: 15px;
+}
+ .btnsWrapper .headBtn{
+    padding: 0;
     width: 35px;
     height: 35px;
     border-radius: 5px;
-    border: none;
-    background-color: #d69318dc;
+    border: 1px solid var(--color-primary);
+    background-color: #d69318d2;
     color: #fff;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
     transition: var(--transition-main);
 }
+ .btnsWrapper .view-button:hover{
+    background-color: #fff;
+    color: var(--color-primary);
+}
+
+
+
 
 
 .product-card .product-actions {
@@ -125,6 +139,7 @@
     cursor: pointer;
     transition: var(--transition-main);
 }
+
 
 .product-card .priceWrapper{
     background-color: var(--bg-component);
@@ -177,3 +192,4 @@
         max-width: 100%;
     }
 }
+

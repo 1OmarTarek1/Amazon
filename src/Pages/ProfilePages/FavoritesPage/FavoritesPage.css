@@ -1,0 +1,37 @@
+.favoritesPage .favorites-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--bg-component);
+}
+.favoritesPage .favHead{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-component);
+    border-radius: 10px;
+    margin-block: 10px 20px;
+    padding: 15px 20px;
+}
+.favoritesPage .favHead h3{
+    margin: 0;
+}
+.favoritesPage .favHead button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 13px;
+    border-radius: 5px;
+    border: 1px solid var(--color-borderSecLight);
+    background-color: transparent;
+    color: var(--font-secondaryColor);
+    transition: var(--transition-main);
+}
+.favoritesPage .favHead button:hover{
+    color: #fff;
+    background-color: red;
+}

@@ -52,6 +52,15 @@
         "price": "السعر",
         "color": "اللون",
         "review": "قييم المنتج"
+    },
+    
+    "favoritesPage": {
+        "favoritesTitle" : "المفضلة",
+        "deleteBtn": "حذف الجميع",
+        "noDataYet": "لا يوجد منتجات مفضلة حتى الآن.",
+        "confirmDeleteAll": "هل أنت متأكد أنك تريد حذف جميع المنتجات من المفضلة لديك؟",
+        "noProductsToDelete": "لا يوجد منتجات للحذف !"
     }
+
     
 }

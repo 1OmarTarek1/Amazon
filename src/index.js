@@ -5,12 +5,23 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import 'aos/dist/aos.css'; 
 import App from './App.jsx';
 import { ThemeProvider } from './Components/ThemeProvider/ThemeProvider.jsx';
-import './App.css'
+import { FavoritesProvider } from './Components/FavoritesPageComponents/FavoritesContext/FavoritesContext.jsx';
+import { I18nextProvider } from 'react-i18next';
+import i18n from './Components/i18n/i18n';
+import { BrowserRouter as Router } from 'react-router-dom';
+import './App.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render( 
-    <ThemeProvider>
-        <App /> 
-    </ThemeProvider>
+root.render(
+    <React.StrictMode>
+        <I18nextProvider i18n={i18n}>
+            <ThemeProvider>
+                <FavoritesProvider>
+                    <Router basename='Amazon'>
+                        <App />
+                    </Router>
+                </FavoritesProvider>
+            </ThemeProvider>
+        </I18nextProvider>
+    </React.StrictMode>
 );
-
