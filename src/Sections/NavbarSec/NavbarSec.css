@@ -87,6 +87,7 @@
 
 
 /*SideBtn*/
+
 .navbarSec .logoBX .sideBtn {
     position: relative;
     display: grid;
@@ -106,6 +107,10 @@
 .navbarSec .logoBX .sideBtn svg{
     position: relative;
     left: -1px;
+}
+html[dir="rtl"] .navbarSec 
+.logoBX .sideBtn svg{
+    transform: rotate(180deg);
 }
 
 

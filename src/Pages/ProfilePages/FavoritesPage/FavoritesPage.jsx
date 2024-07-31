@@ -1,9 +1,11 @@
 import React, { useContext } from 'react';
 import { FavoritesContext } from '../../../Components/FavoritesPageComponents/FavoritesContext/FavoritesContext'; 
 import { MainContainer, ProductCard } from '../../../Components'; 
-import './FavoritesPage.css';
 import { FaTrashAlt } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
+import { FaPlus } from 'react-icons/fa6';
+import { NavLink } from 'react-router-dom';
+import './FavoritesPage.css';
 
 const FavoritesPage = () => {
     const { favorites, clearFavorites } = useContext(FavoritesContext);
@@ -28,20 +30,40 @@ const FavoritesPage = () => {
                     <h3>
                         {t("favoritesPage.favoritesTitle")}
                     </h3>
-                    <button className='deleteAll' onClick={handleDeleteAll}>
-                        <FaTrashAlt />
-                        <span>
-                            {t("favoritesPage.deleteBtn")}
-                        </span>
-                    </button>
+                    {favorites.length > 1 && (
+                        <button className='deleteAll' onClick={handleDeleteAll}>
+                            <FaTrashAlt />
+                            <span>
+                                {t("favoritesPage.deleteBtn")}
+                            </span>
+                        </button>
+                    )}
                 </div>
                 <div className="favorites-list">
                     {favorites.length === 0 ? (
-                        <p>
-                            {t("favoritesPage.noDataYet")}
-                        </p>
+                        <>
+                            <NavLink to={"/"} className="noDataCard addSome">    
+                                <FaPlus />
+                            </NavLink>
+                            <div className="noDataCard">    
+                                <div>
+                                    {t("favoritesPage.noDataYet")}
+                                </div>
+                            </div>
+                            <div className="noDataCard">    
+                                <div>
+                                    {t("favoritesPage.noDataYet")}
+                                </div>
+                            </div>
+                            <div className="noDataCard">    
+                                <div>
+                                    {t("favoritesPage.noDataYet")}
+                                </div>
+                            </div>
+                
+                        </>
                     ) : (
-                        favorites.map((product, index) => (
+                        favorites.map((product) => (
                             <ProductCard key={product.id} product={product} />
                         ))
                     )}

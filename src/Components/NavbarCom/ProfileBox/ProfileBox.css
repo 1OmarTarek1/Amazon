@@ -160,6 +160,10 @@ span {
 
 
 /*Start Effect*/
+html[dir="rtl"] .navbarSec 
+.profileItem:hover .proBxLink{
+    transform: translateX(-5px);
+}
 .navbarSec .profileItem:hover .proBxLink{
     color: var(--color-primary);
     transform: translateX(5px);

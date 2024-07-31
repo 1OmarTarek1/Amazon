@@ -32,15 +32,15 @@ const App = () => {
   
 
   return (
-    <>
-      { isLoading
-      ? (
-        <Loading 
-        isLoading={isLoading}
-        setIsLoading={setIsLoading}
-        />
-      )
-      : (
+    // <>
+    //   { isLoading
+    //   ? (
+    //     <Loading 
+    //     isLoading={isLoading}
+    //     setIsLoading={setIsLoading}
+    //     />
+    //   )
+    //   : (
           <>
             <DTitle />
             <div className="MAIN-WRAPPER" style={{position:"relative"}}>       
@@ -51,6 +51,7 @@ const App = () => {
               <NavbarSec 
               isLoadingSec={isLoadingSec}
               setIsLoading={setIsLoading}
+              setIsLoadingSec={setIsLoadingSec}
               toggleSidebar={toggleSidebar}
               />
               <SidebarSec 
@@ -67,9 +68,9 @@ const App = () => {
               <ScrollToTop />
             </div>
           </>
-      )
-      }
-    </>
+    //   )
+    //   }
+    // </>
   );
 }
 

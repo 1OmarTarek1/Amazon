@@ -35,3 +35,29 @@
     color: #fff;
     background-color: red;
 }
+
+
+/*no card data*/
+.favoritesPage .noDataCard{
+    flex: 1;
+    min-width: 250px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid var(--color-borderSecLight);
+    box-shadow: var(--mainShadow);
+    color: var(--font-secondaryColor);
+    background-color: var(--bg-component);
+    transition: var(--transition-main);
+    cursor: default;
+}
+.favoritesPage .addSome{
+    font-size: 25px;
+    cursor: pointer;
+}
+.favoritesPage .addSome:hover{
+    transform: translateY(-5px);
+    box-shadow: var(--secShadow);
+}

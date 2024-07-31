@@ -3,13 +3,13 @@ import { useTranslation } from 'react-i18next';
 import { IoEarth } from 'react-icons/io5';
 import './LangBtn.css';
 
-const LangBtn = ({ setIsLoading, txt }) => {
+const LangBtn = ({ setIsLoadingSec, txt }) => {
     const { i18n } = useTranslation();
 
     const toggleLanguage = async () => { 
         // all comments about when translate is finished the loading will go
         
-        // setIsLoading(true);
+        // setIsLoadingSec(true);
         // Add a fake delay before changing the language
         // await new Promise(resolve => setTimeout(resolve, 500));
 
@@ -18,10 +18,10 @@ const LangBtn = ({ setIsLoading, txt }) => {
         
         await i18n.changeLanguage(newLanguage);
         localStorage.setItem('selectedLanguage', newLanguage); 
-        // setIsLoading(false);
+        // setIsLoadingSec(false);
 
-        setIsLoading(true);
-        const timer = setTimeout(() => setIsLoading(false), 1000);
+        setIsLoadingSec(true);
+        const timer = setTimeout(() => setIsLoadingSec(false), 1000);
         return () => clearTimeout(timer);
     };
 

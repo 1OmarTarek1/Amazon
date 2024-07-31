@@ -7,7 +7,7 @@ import { MdSearchOff, MdSearch } from "react-icons/md";
 import { FaBell, FaCartShopping, FaHeart, FaList, FaMoon, FaSun } from 'react-icons/fa6';
 import './NavbarSec.css';
 
-const NavbarSec = ({ isLoading, setIsLoading, toggleSidebar }) => {
+const NavbarSec = ({ isLoading, setIsLoading, toggleSidebar, setIsLoadingSec }) => {
   const [openNav, setOpenNav] = useState(false);
   const [mobMedia, setMobMedia] = useState(false);
   const [search, setSearch] = useState(false);
@@ -123,6 +123,7 @@ const NavbarSec = ({ isLoading, setIsLoading, toggleSidebar }) => {
             <LangBtn
               isLoading={isLoading}
               setIsLoading={setIsLoading}
+              setIsLoadingSec={setIsLoadingSec}
             />
             {mobMedia && (
               <div className="icnWrapperSrch themWrapper">

@@ -57,7 +57,7 @@
     "favoritesPage": {
         "favoritesTitle" : "المفضلة",
         "deleteBtn": "حذف الجميع",
-        "noDataYet": "لا يوجد منتجات مفضلة حتى الآن.",
+        "noDataYet": "لا يوجد منتج",
         "confirmDeleteAll": "هل أنت متأكد أنك تريد حذف جميع المنتجات من المفضلة لديك؟",
         "noProductsToDelete": "لا يوجد منتجات للحذف !"
     }
