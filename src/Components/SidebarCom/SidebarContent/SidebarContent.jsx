@@ -7,7 +7,7 @@ import { DetailsItem, LangBtn, Search, ThemeBtn } from '../../../Components';
 import { MdSearch } from 'react-icons/md';
 import './SidebarContent.css';
 
-const SidebarContent = ({ clickEvent, setIsLoading }) => {
+const SidebarContent = ({ clickEvent, setIsLoadingSec }) => {
     const [searchValue, setSearchValue] = useState("");
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -95,7 +95,7 @@ const SidebarContent = ({ clickEvent, setIsLoading }) => {
                             <div className="name">
                                 <span>{t("navbar.language")}</span>
                                 <div className="" onClick={clickEvent}>
-                                    <LangBtn setIsLoading={setIsLoading} />
+                                    <LangBtn setIsLoadingSec={setIsLoadingSec} />
                                 </div>
                             </div>
                         </div>

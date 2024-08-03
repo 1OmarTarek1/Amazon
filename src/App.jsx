@@ -32,45 +32,46 @@ const App = () => {
   
 
   return (
-    // <>
-    //   { isLoading
-    //   ? (
-    //     <Loading 
-    //     isLoading={isLoading}
-    //     setIsLoading={setIsLoading}
-    //     />
-    //   )
-    //   : (
-          <>
-            <DTitle />
-            <div className="MAIN-WRAPPER" style={{position:"relative"}}>       
-                <LoadingSec 
-                    isLoadingSec={isLoadingSec}
-                    setIsLoadingSec={setIsLoadingSec}
-                />
-              <NavbarSec 
-              isLoadingSec={isLoadingSec}
-              setIsLoading={setIsLoading}
-              setIsLoadingSec={setIsLoadingSec}
-              toggleSidebar={toggleSidebar}
+    <>
+      { isLoading 
+      ? (
+        <Loading 
+        isLoading={isLoading}
+        setIsLoading={setIsLoading}
+        />
+      )
+      : 
+      (
+        <>
+          <DTitle />
+          <div className="MAIN-WRAPPER" style={{position:"relative"}}>       
+              <LoadingSec 
+                  isLoadingSec={isLoadingSec}
+                  setIsLoadingSec={setIsLoadingSec}
               />
-              <SidebarSec 
-              isOpen={isOpen}
-              setIsOpen={setIsOpen}
-              toggleSidebar={toggleSidebar}
-              setIsLoading={setIsLoading}
-              />
-                <WebRoutes />
-              <FooterSec />
-              
+            <NavbarSec 
+            isLoadingSec={isLoadingSec}
+            setIsLoading={setIsLoading}
+            setIsLoadingSec={setIsLoadingSec}
+            toggleSidebar={toggleSidebar}
+            />
+            <SidebarSec 
+            isOpen={isOpen}
+            setIsOpen={setIsOpen}
+            toggleSidebar={toggleSidebar}
+            setIsLoadingSec={setIsLoadingSec}
+            />
+              <WebRoutes />
+            <FooterSec />
+            
 
-              <ToTopBtn />
-              <ScrollToTop />
-            </div>
-          </>
-    //   )
-    //   }
-    // </>
+            <ToTopBtn />
+            <ScrollToTop />
+          </div>
+        </>
+      )
+      }
+    </>
   );
 }
 

@@ -159,7 +159,7 @@ html[dir="rtl"] .detailsPage
     transform: translate( 85%, -27%);
 }
 html[dir="rtl"] .detailsPage 
-.product-review button svg{
+.product-review .submitIcon{
     transform: rotate(180deg);
 }
 

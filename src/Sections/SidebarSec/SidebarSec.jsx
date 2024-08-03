@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import { SidebarContent } from '../../Components';
 import './SidebarSec.css';
 
-const SidebarSec = ({ setIsLoading, toggleSidebar, isOpen, setIsOpen }) => {
+const SidebarSec = ({ setIsLoadingSec, toggleSidebar, isOpen, setIsOpen }) => {
   const sidebarRef = useRef(null);
 
   const handleCloseSidebar = (event) => {
@@ -35,7 +35,7 @@ const SidebarSec = ({ setIsLoading, toggleSidebar, isOpen, setIsOpen }) => {
 
       <SidebarContent 
       clickEvent={toggleSidebar}
-      setIsLoading={setIsLoading}
+      setIsLoadingSec={setIsLoadingSec}
       />
 
       </div>
