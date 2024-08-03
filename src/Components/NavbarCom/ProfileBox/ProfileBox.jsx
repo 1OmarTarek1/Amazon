@@ -5,7 +5,7 @@ import { FaCircleHalfStroke, FaGear, FaCircleUser, FaCartShopping, FaBell, FaHea
 import { IoLogOutOutline } from 'react-icons/io5';
 import './ProfileBox.css';
 
-const ProfileBox = ({ profileBx, setIsLoading }) => {
+const ProfileBox = ({ profileBx, setIsLoadingSec }) => {
     const { t } = useTranslation();
 
     return (
@@ -49,7 +49,7 @@ const ProfileBox = ({ profileBx, setIsLoading }) => {
                 <li className="profileItem bxLink">
                     <div className={"proBxLink clsProBx"} >
                         <LangBtn 
-                        setIsLoading={setIsLoading}
+                        setIsLoadingSec={setIsLoadingSec}
                         txt={t('navbar.language')}
                         />
                     </div>

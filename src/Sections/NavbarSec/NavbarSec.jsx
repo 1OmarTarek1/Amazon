@@ -215,7 +215,7 @@ const NavbarSec = ({ isLoading, setIsLoading, toggleSidebar, setIsLoadingSec }) 
               <FaBell />
             </NavLink>
 
-            <ProfileLink setIsLoading={setIsLoading} />
+            <ProfileLink setIsLoadingSec={setIsLoadingSec} />
 
             {mobMedia && (
               <NavBtn

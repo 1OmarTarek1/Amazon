@@ -6,7 +6,7 @@ import { ProfileBox } from '../../../Components';
 import { FaUser } from 'react-icons/fa6';
 import './ProfileLink.css';
 
-const ProfileLink = ({ setIsLoading }) => {
+const ProfileLink = ({ setIsLoadingSec }) => {
     const [profileBx, setProfileBx] = useState(false);
     const location = useLocation();
 
@@ -53,7 +53,7 @@ const ProfileLink = ({ setIsLoading }) => {
             <ProfileBox
                 profileBx={profileBx}
                 setProfileBx={setProfileBx}
-                setIsLoading={setIsLoading}
+                setIsLoadingSec={setIsLoadingSec}
             />
         </div>
     );
