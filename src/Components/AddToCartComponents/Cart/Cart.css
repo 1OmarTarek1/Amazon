@@ -1,0 +1,130 @@
+.cartWrapper.active{    
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+.cartWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    right: 0;
+    top: 147%;
+    padding: 5px;
+    overflow-y: scroll;
+    border: 1px solid var(--color-borderLight);
+    border-radius: 5px;
+    background-color: var();
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: var(--transition-main);
+}
+.cartWrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* border-radius: 5px; */
+    backdrop-filter: var(--main-blur);
+    background-color: var(--bg-glass);
+    transition: var(--transition-main);
+}
+html[dir="rtl"] .cartWrapper{
+    right: unset;
+    left: 0;
+}
+
+
+.cartWrapper .addedCards{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.cartWrapper .addedCard{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid var(--color-borderLight);
+    border-radius: 3px;
+    cursor: default;
+}
+.cartWrapper .addedCard .addedCardDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0px;
+}
+.cartWrapper .addedCard .addedCardDetails p{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: var(--font-navColor);
+}
+.cartWrapper .addedCard .addedCardDetails div{
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--font-navColor);
+}
+
+.cartWrapper .cardImgWrapper{
+    position: relative;
+    padding: 3px;
+    border-radius: 2px;
+}
+.cartWrapper .cardImgWrapper img{
+    border-radius: 2px;
+    max-width: 60px;
+    max-height: 60px;
+}
+.cartWrapper .cardImgWrapper p{
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    margin: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 600;
+    background-color: #000000b2;
+    color: var(--font-navColor);
+}
+.cartWrapper .cardImgWrapper p:last-child{
+    top: calc(100% - 4px);
+    transform: translateY(-100%);
+}
+
+.cartWrapper .addedCard button{
+    padding: 20px;
+    /* font-size: 16px; */
+    background-color: transparent;
+    border: 1px solid var(--color-borderLight);
+    border-radius: 2px;
+    color: var(--font-navColor);
+}
+.cartWrapper .footerBtn{
+    display: flex;
+    gap: 3px;
+}
+.cartWrapper .footerBtn button{
+    flex: 1;
+    margin-top: 10px;
+    padding: 4px 0;
+    font-size: 14px;
+    border-radius: 3px;
+    border: 1px solid var(--color-borderLight);
+    color: var(--font-navColor);
+    background-color: transparent;
+}
+

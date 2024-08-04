@@ -2,9 +2,9 @@ import { useEffect, useRef, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Headroom from 'react-headroom';
 import { useTheme } from '../../Components/ThemeProvider/ThemeProvider';
-import { LangBtn, NavBtn, NavLinks, ProfileLink, Search } from '../../Components';
+import {  CartLink, LangBtn, NavBtn, NavLinks, ProfileLink, Search } from '../../Components';
 import { MdSearchOff, MdSearch } from "react-icons/md";
-import { FaBell, FaCartShopping, FaHeart, FaList, FaMoon, FaSun } from 'react-icons/fa6';
+import { FaBell, FaHeart, FaList, FaMoon, FaSun } from 'react-icons/fa6';
 import './NavbarSec.css';
 
 const NavbarSec = ({ isLoading, setIsLoading, toggleSidebar, setIsLoadingSec }) => {
@@ -201,12 +201,7 @@ const NavbarSec = ({ isLoading, setIsLoading, toggleSidebar, setIsLoadingSec }) 
               <FaHeart />
             </NavLink>
 
-            <NavLink
-              className="navProfIcon shopCarIcn"
-              to={"/MyShop"}
-            >
-              <FaCartShopping />
-            </NavLink>
+            <CartLink />
 
             <NavLink
               className="navProfIcon NotifyIcn"

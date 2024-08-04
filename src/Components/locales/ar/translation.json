@@ -51,7 +51,8 @@
         "brand": "الماركة",
         "price": "السعر",
         "color": "اللون",
-        "review": "قييم المنتج"
+        "review": "قييم المنتج",
+        "selectBothMessage": "الرجاء تحديد اللون والمقاس."
     },
     
     "favoritesPage": {

@@ -51,7 +51,8 @@
         "brand": "Brand",
         "price": "Price",
         "color": "Color",
-        "review": "Leave a review"
+        "review": "Leave a review",
+        "selectBothMessage": "Please select color and size."
     },
 
 

@@ -41,6 +41,9 @@ export { default as ProductList } from './ProductCardComponents/ProductList/Prod
 export { default as FilterButton } from './ProductCardComponents/FilterButton/FilterButton'
 export { default as ProductCard } from './ProductCardComponents/ProductCard/ProductCard'
 
+export { default as Cart } from './AddToCartComponents/Cart/Cart'
+export { default as CartLink } from './CartLink/CartLink'
+
 //Details page Components
 export { default as ProductTitleRating } from './DetailsPageComponents/ProductTitleRating/ProductTitleRating '
 export { default as ProductDetails } from './DetailsPageComponents/ProductDetails/ProductDetails'
