@@ -61,6 +61,14 @@
         "noDataYet": "لا يوجد منتج",
         "confirmDeleteAll": "هل أنت متأكد أنك تريد حذف جميع المنتجات من المفضلة لديك؟",
         "noProductsToDelete": "لا يوجد منتجات للحذف !"
+    },
+
+    "AddToCartPage": {
+        "cartTitle": "عربة التسوق",
+        "deleteBtn": "حذف الكل",
+        "noDataYet": "لا توجد منتجات في العربة",
+        "confirmDeleteAll": "هل أنت متأكد أنك تريد حذف كافة المنتجات ؟",
+        "checkOut": "الدفع"
     }
 
     

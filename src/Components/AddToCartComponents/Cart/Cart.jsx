@@ -1,5 +1,6 @@
 import React, { useContext, forwardRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { CartContext } from '../CartContext/CartContext';
 import { FaTrashAlt } from 'react-icons/fa';
 import './Cart.css';
@@ -7,6 +8,7 @@ import './Cart.css';
 const Cart = forwardRef(({ activeCartBx, setActiveCartBx }, ref) => {
     const { cart, removeFromCart, clearCart } = useContext(CartContext);
     const navigate = useNavigate();
+    const { t } = useTranslation()
 
     const handleCheckout = () => {
         setActiveCartBx(false); // Close the cart
@@ -20,6 +22,13 @@ const Cart = forwardRef(({ activeCartBx, setActiveCartBx }, ref) => {
 
     return (
         <div ref={ref} className={`cartWrapper ${activeCartBx && 'active'}`}>
+            <NavLink 
+            to={"/MyShop"}
+            className="cartTitle" 
+            onClick={()=>{setActiveCartBx(false)}}
+            >
+                {t("AddToCartPage.cartTitle")}
+            </NavLink>
             {cart.length === 0 ? (
                 <p
                 style={{
@@ -33,7 +42,9 @@ const Cart = forwardRef(({ activeCartBx, setActiveCartBx }, ref) => {
                     fontWeight:"600"
                 }}
                 >
-                    <span style={{display:"grid",placeContent:"center"}}>No products in the cart.</span>
+                    <span style={{display:"grid",placeContent:"center"}}>
+                        {t("AddToCartPage.noDataYet")}
+                    </span>
                 </p>
             ) : (
                 <ul className="addedCards">
@@ -65,12 +76,16 @@ const Cart = forwardRef(({ activeCartBx, setActiveCartBx }, ref) => {
             {cart.length > 0 && (
                 <div className="footerBtn">
                     <button onClick={handleCheckout}>
-                        Checkout
+                    {t("AddToCartPage.checkOut")}
                     </button>
-                    <button onClick={clearCart}>
-                        <FaTrashAlt />
-                        <span>Delete All</span>
-                    </button>
+                    {cart.length > 1 && (
+                        <button onClick={clearCart}>
+                            <FaTrashAlt />
+                            <span>
+                                {t("AddToCartPage.deleteBtn")}
+                            </span>
+                        </button>
+                    )}
                 </div>
             )}
         </div>

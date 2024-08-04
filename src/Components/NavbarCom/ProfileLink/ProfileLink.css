@@ -1,5 +1,7 @@
 .profileLink{
     position: relative;
+}
+.profileLink > span{
     width: 33px;
     height: 33px;
     display: grid;
@@ -11,19 +13,18 @@
     transition: var(--transition-main);
 }
 
-.profileLink:hover{
+.profileLink > span:hover{
     border-color: var(--color-primary);
     color: var(--color-primary);
 }
-.profileLink.active{
-    /* border-color: var(--color-primary); */
+.profileLink.active > span{
+    color: var(--color-primary);
     filter: drop-shadow( 0px 0px 4px );
-    /* box-shadow: 0 0 10px 1px var(--color-primary); */
 }
 
 .profileLink svg{
     position: relative;
-    top: -1px;
+    /* top: -1px; */
     border-radius: 3px;
     color: var(--font-navColor);
     transition: var(--transition-main);

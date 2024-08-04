@@ -63,9 +63,9 @@ const ProductDetails = ({
                 <div className='priceWrapper'>
                     {t("productDetails.price")} 
                     <div className="">
-                        {product.price}
+                        {product.price}LE
                         <span className='sale'>
-                            {product.sale}
+                            {product.sale}LE
                         </span>
                     </div> 
                 </div>

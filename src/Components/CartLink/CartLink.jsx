@@ -2,11 +2,22 @@ import './CartLink.css';
 import { Cart } from '../../Components';
 import { FaCartShopping } from 'react-icons/fa6';
 import { useState, useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const CartLink = () => {
     const [activeCartBx, setActiveCartBx] = useState(false);
+    const [isActive, setIsActive] = useState(false);
     const cartRef = useRef(null);
     const cartBtnRef = useRef(null);
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.pathname === "/MyShop") {
+            setIsActive(true);
+        } else {
+            setIsActive(false);
+        }
+    }, [location.pathname]);
 
     useEffect(() => {
         const handleMouseDown = (event) => {
@@ -27,7 +38,10 @@ const CartLink = () => {
     }, []);
 
     return (
-        <div style={{ position: 'relative' }}>
+        <div 
+        className={`cartBtnWrapper ${isActive || activeCartBx ? 'active' : ''}`} 
+        style={{ position: 'relative' }}
+        >
             <div
                 className="cartBtn navProfIcon shopCarIcn"
                 onClick={() => setActiveCartBx(!activeCartBx)}

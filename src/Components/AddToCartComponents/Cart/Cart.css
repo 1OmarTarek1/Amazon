@@ -9,11 +9,11 @@
     justify-content: space-between;
     width: 300px;
     height: 400px;
+    overflow: hidden;
     position: absolute;
     right: 0;
     top: 147%;
-    padding: 5px;
-    overflow-y: scroll;
+    padding: 5px 0;
     border: 1px solid var(--color-borderLight);
     border-radius: 5px;
     background-color: var();
@@ -40,11 +40,29 @@ html[dir="rtl"] .cartWrapper{
     left: 0;
 }
 
+.cartWrapper .cartTitle{
+    margin-inline: 5px;
+    margin-bottom: 5px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    border: 1px solid var(--color-borderLight);
+    border-radius: 2px;
+    color: var(--font-navColor);
+    transition: var(--transition-main);
+}
+
 
 .cartWrapper .addedCards{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
+    padding-inline: 5px;
+    height: 400px;
+    overflow-y: scroll;
+}
+.cartWrapper .addedCards::-webkit-scrollbar-track{
+    background-color: transparent;
 }
 .cartWrapper .addedCard{
     display: flex;
@@ -54,6 +72,7 @@ html[dir="rtl"] .cartWrapper{
     border: 1px solid var(--color-borderLight);
     border-radius: 3px;
     cursor: default;
+    transition: var(--transition-main);
 }
 .cartWrapper .addedCard .addedCardDetails{
     display: flex;
@@ -67,11 +86,13 @@ html[dir="rtl"] .cartWrapper{
     padding: 0;
     font-size: 14px;
     color: var(--font-navColor);
+    transition: var(--transition-main);
 }
 .cartWrapper .addedCard .addedCardDetails div{
     font-size: 17px;
     font-weight: 600;
     color: var(--font-navColor);
+    transition: var(--transition-main);
 }
 
 .cartWrapper .cardImgWrapper{
@@ -104,6 +125,12 @@ html[dir="rtl"] .cartWrapper{
     top: calc(100% - 4px);
     transform: translateY(-100%);
 }
+html[dir="rtl"] .cartWrapper 
+.cardImgWrapper p{
+    left: unset;
+    right: 4px;
+}
+
 
 .cartWrapper .addedCard button{
     padding: 20px;
@@ -112,19 +139,57 @@ html[dir="rtl"] .cartWrapper{
     border: 1px solid var(--color-borderLight);
     border-radius: 2px;
     color: var(--font-navColor);
+    transition: var(--transition-main);
 }
 .cartWrapper .footerBtn{
     display: flex;
     gap: 3px;
+    padding-inline: 5px;
 }
 .cartWrapper .footerBtn button{
     flex: 1;
-    margin-top: 10px;
-    padding: 4px 0;
+    margin-top: 5px;
+    padding: 5px 0;
     font-size: 14px;
     border-radius: 3px;
     border: 1px solid var(--color-borderLight);
     color: var(--font-navColor);
     background-color: transparent;
+    transition: var(--transition-main);
 }
 
+.cartWrapper .footerBtn button:last-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+
+
+
+
+/*start effects*/
+.cartWrapper .cartTitle:hover,
+.cartWrapper .addedCard:hover{
+    color:var(--color-primary);
+    background-color: #ffffff18;
+}
+
+.cartWrapper .addedCard:hover 
+.addedCardDetails div,
+.cartWrapper .addedCard:hover 
+.addedCardDetails p{
+    color:var(--color-primary);
+}
+
+.cartWrapper .addedCard button:hover,
+.cartWrapper .footerBtn button:last-child:hover{
+    border-color: red;
+    color: red;
+}
+.cartWrapper .footerBtn button:first-child:hover{
+    border-color: green;
+    color: green;
+}
+/*end effects*/

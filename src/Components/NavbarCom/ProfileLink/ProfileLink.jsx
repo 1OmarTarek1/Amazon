@@ -41,11 +41,11 @@ const ProfileLink = ({ setIsLoadingSec }) => {
 
     return (
         <div
-            className={isActive ? "profileLink clsLink active" : "profileLink clsLink"}
+            className={isActive || profileBx ? "profileLink clsLink active" : "profileLink clsLink"}
             onClick={handleProBx}
             style={{ cursor: "pointer" }}
         >
-            <span>
+            <span className='userIcn'>
                 <FaUser />
             </span>
 

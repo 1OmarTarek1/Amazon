@@ -62,5 +62,13 @@
         "noDataYet": "No product found",
         "confirmDeleteAll": "Are you sure you want to delete all products from your favorites?",
         "noProductsToDelete": "No products to delete !"
+    },
+
+    "AddToCartPage": {
+        "cartTitle": "Shopping Cart",
+        "deleteBtn": "Delete All",
+        "noDataYet": "No products in the cart",
+        "confirmDeleteAll": "Are you sure you want to delete all products ?",
+        "checkOut": "Check Out"
     }
 }

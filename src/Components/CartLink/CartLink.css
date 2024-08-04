@@ -1,0 +1,10 @@
+.cartBtnWrapper.active .cartBtn{
+    color: var(--color-primary) !important;
+    filter: drop-shadow(0px 0px 4px );
+}
+.cartBtnWrapper .cartBtn{
+    cursor: pointer;
+}
+.cartBtnWrapper .cartBtn:hover svg{
+    color: var(--color-primary);
+}
