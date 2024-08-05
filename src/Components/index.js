@@ -48,6 +48,7 @@ export { default as CartLink } from './CartLink/CartLink'
 export { default as ProductTitleRating } from './DetailsPageComponents/ProductTitleRating/ProductTitleRating '
 export { default as ProductDetails } from './DetailsPageComponents/ProductDetails/ProductDetails'
 export { default as ActionWrapper } from './DetailsPageComponents/ActionWrapper/ActionWrapper'
+export { default as FakeComments } from './FakeComments/FakeComments'
 
 
 // export { default as ThemeProvider } from './ThemeProvider/ThemeProvider'

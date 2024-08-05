@@ -11,7 +11,7 @@ import { LikeBtn } from '../../../Components';
 const ProductCard = ({ product }) => {
     const [selectedColor, setSelectedColor] = useState(null);
     const [selectedSize, setSelectedSize] = useState(null);
-    const [productCount, setProductCount] = useState(0);
+    const [productCount, setProductCount] = useState(1);
     const navigate = useNavigate();
     const { toggleFavorites, isFavorite } = useContext(FavoritesContext);
     const { addToCart } = useContext(CartContext);
@@ -154,7 +154,9 @@ const ProductCard = ({ product }) => {
                         }}
                     >
                         <FaCartShopping />
-                        <span className="product-count">{productCount}</span>
+                        {productCount > 1 && (
+                            <span className="product-count">{productCount}</span>
+                        )}
                     </button>
                     <button
                         className="footBtn remove-from-cart-button"
@@ -172,5 +174,3 @@ const ProductCard = ({ product }) => {
 };
 
 export default ProductCard;
-
-

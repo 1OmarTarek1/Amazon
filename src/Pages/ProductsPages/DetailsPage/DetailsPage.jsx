@@ -1,14 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { useLocation } from 'react-router-dom';
+import { CartContext } from '../../../Components/AddToCartComponents/CartContext/CartContext';
 import { MainContainer, ActionWrapper, ProductDetails, ProductTitleRating } from '../../../Components';
 import './DetailsPage.css';
 
 const DetailsPage = () => {
     const location = useLocation();
     const { product } = location.state || {};
+    const { addToCart } = useContext(CartContext);
 
     const [selectedColor, setSelectedColor] = useState('main');
     const [selectedSize, setSelectedSize] = useState(null);
+    const [productCount, setProductCount] = useState(1);
     const [rating, setRating] = useState(0);
     const [comment, setComment] = useState('');
     const [comments, setComments] = useState([]);
@@ -30,7 +33,26 @@ const DetailsPage = () => {
             alert('Please select both a color and a size.');
             return;
         }
-        // Logic for adding the product to the cart
+
+        const productToAdd = {
+            ...product,
+            selectedColor,
+            selectedSize,
+            productCount,
+            id: Date.now(), // Ensure each product has a unique ID
+            frontImg: product[`${selectedColor}ImgFront`], // Add image URL
+        };
+
+        addToCart(productToAdd);
+        alert('Product added to cart');
+    };
+
+    const handleIncrement = () => {
+        setProductCount((prevCount) => prevCount + 1);
+    };
+
+    const handleDecrement = () => {
+        setProductCount((prevCount) => (prevCount > 1 ? prevCount - 1 : 1));
     };
 
     const settings = {
@@ -151,7 +173,12 @@ const DetailsPage = () => {
                         renderSizeButtons={renderSizeButtons}
                     />
                     
-                    <ActionWrapper handleAddToCart={handleAddToCart} />
+                    <ActionWrapper 
+                        handleAddToCart={handleAddToCart}
+                        productCount={productCount}
+                        handleIncrement={handleIncrement}
+                        handleDecrement={handleDecrement}
+                    />
                 </div>
             </MainContainer>
         </div>
