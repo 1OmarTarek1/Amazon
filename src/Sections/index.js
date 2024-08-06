@@ -1,4 +1,5 @@
 export { default as NavbarSec } from './NavbarSec/NavbarSec'
+export { default as MobileNavSec } from './MobileNavSec/MobileNavSec'
 export { default as SidebarSec } from './SidebarSec/SidebarSec'
 
 export { default as MainCarouselSec } from './MainCarouselSec/MainCarouselSec'

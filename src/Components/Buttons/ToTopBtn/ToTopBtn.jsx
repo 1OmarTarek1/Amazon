@@ -20,9 +20,9 @@ const ToTopBtn = () => {
     return (
         <>
             <button 
-            className  =  'arrow-btn' 
-            onClick    =  {scrollToTop} 
-            style      =  {{bottom: visible ? '3%' : '-50px'}}>
+                className  =  {`arrow-btn ${visible && "visible"}`} 
+                onClick    =  {scrollToTop} 
+            >
                 <FaArrowUp />
             </button>
         </>

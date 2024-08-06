@@ -65,10 +65,10 @@
 
     "AddToCartPage": {
         "cartTitle": "عربة التسوق",
+        "noDataYet": "لا توجد منتجات في العربة حتى الآن.",
+        "checkOut": "الدفع",
         "deleteBtn": "حذف الكل",
-        "noDataYet": "لا توجد منتجات في العربة",
-        "confirmDeleteAll": "هل أنت متأكد أنك تريد حذف كافة المنتجات ؟",
-        "checkOut": "الدفع"
+        "confirmDeleteAll": "هل أنت متأكد أنك تريد حذف جميع العناصر من العربة؟"
     }
 
     

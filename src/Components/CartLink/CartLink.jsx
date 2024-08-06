@@ -1,8 +1,8 @@
-import './CartLink.css';
 import { Cart } from '../../Components';
 import { FaCartShopping } from 'react-icons/fa6';
 import { useState, useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
+import './CartLink.css';
 
 const CartLink = () => {
     const [activeCartBx, setActiveCartBx] = useState(false);
@@ -43,7 +43,7 @@ const CartLink = () => {
         style={{ position: 'relative' }}
         >
             <div
-                className="cartBtn navProfIcon shopCarIcn"
+                className="cartBtn shopCarIcn"
                 onClick={() => setActiveCartBx(!activeCartBx)}
                 ref={cartBtnRef}
                 style={{

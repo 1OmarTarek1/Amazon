@@ -38,6 +38,7 @@
 
 @media screen and ( max-width: 768px) {
     .profileLink{
+        display: none;
         margin-left: 0px;
     }
 }

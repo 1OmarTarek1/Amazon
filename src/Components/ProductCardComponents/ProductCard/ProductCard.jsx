@@ -43,6 +43,10 @@ const ProductCard = ({ product }) => {
         };
         addToCart(productData);
         alert('Product added to cart');
+        // Reset the selected options and product count
+        setSelectedColor(null);
+        setSelectedSize(null);
+        setProductCount(1);
     };
 
     const handleViewClick = () => {

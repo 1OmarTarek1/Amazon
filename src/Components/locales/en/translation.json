@@ -66,9 +66,9 @@
 
     "AddToCartPage": {
         "cartTitle": "Shopping Cart",
+        "noDataYet": "No Products in the cart yet.",
+        "checkOut": "Checkout",
         "deleteBtn": "Delete All",
-        "noDataYet": "No products in the cart",
-        "confirmDeleteAll": "Are you sure you want to delete all products ?",
-        "checkOut": "Check Out"
+        "confirmDeleteAll": "Are you sure you want to delete all items from the cart?"
     }
 }

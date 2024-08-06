@@ -4,7 +4,7 @@ import AOS from 'aos';
 import "aos/dist/aos.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { NavbarSec, SidebarSec, FooterSec } from './Sections';
+import { NavbarSec, SidebarSec, FooterSec, MobileNavSec } from './Sections';
 import { DTitle, ScrollToTop, ToTopBtn, WebRoutes, Loading, LoadingSec } from './Components';
 import './App.css';
 
@@ -63,7 +63,7 @@ const App = () => {
             />
               <WebRoutes />
             <FooterSec />
-            
+            <MobileNavSec />
 
             <ToTopBtn />
             <ScrollToTop />

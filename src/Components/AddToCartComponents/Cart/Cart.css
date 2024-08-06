@@ -193,3 +193,25 @@ html[dir="rtl"] .cartWrapper
     color: green;
 }
 /*end effects*/
+
+
+@media screen and (max-width: 415px) {
+    .cartWrapper {
+        /* width: 100dvh; */
+        right: -38px;
+    }
+    html[dir="rtl"] .cartWrapper{
+        right: unset;
+        left: -38px;
+    }
+}
+@media screen and (max-width: 340px) {
+    .cartWrapper {
+        width: 260px;
+        /* right: -57px; */
+    }
+    html[dir="rtl"] .cartWrapper{
+        right: unset;
+        /* left: -57px; */
+    }
+}

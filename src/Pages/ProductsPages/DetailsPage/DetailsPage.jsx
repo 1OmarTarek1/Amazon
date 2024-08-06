@@ -28,6 +28,12 @@ const DetailsPage = () => {
         return <div>Product not found.</div>;
     }
 
+    const resetSelections = () => {
+        setSelectedColor('main');
+        setSelectedSize(null);
+        setProductCount(1);
+    };
+
     const handleAddToCart = () => {
         if (!selectedColor || !selectedSize) {
             alert('Please select both a color and a size.');
@@ -45,6 +51,7 @@ const DetailsPage = () => {
 
         addToCart(productToAdd);
         alert('Product added to cart');
+        resetSelections(); // Reset selections after adding to cart
     };
 
     const handleIncrement = () => {
