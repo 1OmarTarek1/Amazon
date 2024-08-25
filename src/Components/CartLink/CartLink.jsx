@@ -1,5 +1,5 @@
 import { Cart } from '../../Components';
-import { FaCartShopping } from 'react-icons/fa6';
+import { FaBagShopping } from 'react-icons/fa6';
 import { useState, useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import './CartLink.css';
@@ -50,7 +50,7 @@ const CartLink = () => {
                     color: "var(--font-navColor)"
                 }}
             >
-                <FaCartShopping />
+                <FaBagShopping  />
             </div>
             <Cart
                 activeCartBx={activeCartBx}

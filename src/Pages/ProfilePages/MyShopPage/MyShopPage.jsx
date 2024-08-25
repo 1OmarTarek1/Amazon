@@ -1,6 +1,6 @@
-import './MyShopPage.css';
-import React from 'react';
 import { useLocation } from 'react-router-dom';
+import { MainContainer } from '../../../Components';
+import './MyShopPage.css';
 
 const MyShopPage = () => {
     const location = useLocation();
@@ -14,27 +14,70 @@ const MyShopPage = () => {
 
     return (
         <div className="my-shop-page">
-            <h1>My Shop Page</h1>
-            {cart.map((product, index) => (
-                <div key={index} className="product-info">
-                    <img
-                        src={product.frontImg}
-                        alt={`${product.title} ${product.selectedColor} Front`}
-                        className="product-image"
-                    />
-                    <div className="product-details">
-                        <h2>{product.title}</h2>
-                        <p>{`Color: ${product.selectedColor}`}</p>
-                        <p>{`Size: ${product.selectedSize}`}</p>
-                        <p>{`Price: ${product.price} LE`}</p>
-                        <p>{`Count: ${product.productCount}`}</p>
-                        <p>{`Total Price: ${product.price * product.productCount} LE`}</p>
-                    </div>
+            <MainContainer>
+                <div className="allProducts">
+                    {cart.map((product, index) => (
+                        <div key={index} className="product-info">
+                            <div className="imgWrapper d-flex gap-3">
+                                <img
+                                    src={product.frontImg}
+                                    alt={`${product.title} ${product.selectedColor} Front`}
+                                    className="product-image"
+                                />
+                                <div className="prodTitle">
+                                    <h2>{product.title}</h2>
+                                    <div>{product.brand}</div>
+                                </div>
+                            </div>
+                            <ul className="product-details">
+                                <li className='detItem'>
+                                    <div className="detItemHead">
+                                        Color
+                                    </div>
+                                    <div className="detItemFooter">
+                                        {product.selectedColor}
+                                    </div>
+                                </li>
+                                <li className='detItem'>
+                                    <div className="detItemHead">
+                                        Size
+                                    </div>
+                                    <div className="detItemFooter">
+                                        {product.selectedSize}
+                                    </div>
+                                </li>
+                                <li className='detItem'>
+                                    <div className="detItemHead">
+                                        Price
+                                    </div>
+                                    <div className="detItemFooter">
+                                        {product.price} LE
+                                    </div>
+                                </li>
+                                <li className='detItem'>
+                                    <div className="detItemHead">
+                                        Count
+                                    </div>
+                                    <div className="detItemFooter">
+                                        {product.productCount}
+                                    </div>
+                                </li>
+                                <li className='detItem'>
+                                    <div className="detItemHead">
+                                        Total Price
+                                    </div>
+                                    <div className="detItemFooter">
+                                        {product.price * product.productCount} LE
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    ))}
                 </div>
-            ))}
-            <div className="total-price">
-                <h2>{`Total Price for All Products: ${totalPrice} LE`}</h2>
-            </div>
+                <div className="total-price">
+                    <h2>{`Total Price for All Products: ${totalPrice} LE`}</h2>
+                </div>
+            </MainContainer>
         </div>
     );
 };

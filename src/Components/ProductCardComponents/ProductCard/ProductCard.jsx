@@ -37,6 +37,7 @@ const ProductCard = ({ product }) => {
             price: product.price,
             frontImg: product[`${selectedColor || 'main'}ImgFront`],
             title: product.title,
+            brand: product.brand,
             selectedColor,
             selectedSize,
             productCount: count,

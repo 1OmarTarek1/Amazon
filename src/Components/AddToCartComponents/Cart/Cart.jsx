@@ -13,7 +13,7 @@ const Cart = forwardRef(({ activeCartBx, setActiveCartBx }, ref) => {
     const handleCheckout = () => {
         setActiveCartBx(false); // Close the cart
         navigate('/MyShop', { state: { cart } });
-        clearCart(); // Clear the cart after navigating
+        // clearCart(); // Clear the cart after navigating
     };
 
     const handleRemove = (productId) => {
