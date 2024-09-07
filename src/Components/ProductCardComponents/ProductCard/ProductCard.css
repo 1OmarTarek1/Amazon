@@ -176,10 +176,12 @@
 
 .product-card .size-button:hover, 
 .product-card .color-button:hover {
+    transform: translateY(-2px);
     border-color: var(--color-primary);
 }
 .product-card .size-button.selected, 
 .product-card .color-button.selected {
+    transform: translateY(-3px);
     border-color: var(--color-primary);
 }
 

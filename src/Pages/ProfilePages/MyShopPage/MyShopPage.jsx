@@ -24,12 +24,21 @@ const MyShopPage = () => {
                                     alt={`${product.title} ${product.selectedColor} Front`}
                                     className="product-image"
                                 />
-                                <div className="prodTitle">
-                                    <h2>{product.title}</h2>
+                                {/* <div className="prodTitle">
                                     <div>{product.brand}</div>
-                                </div>
+                                    <div>{product.title}</div>
+                                </div> */}
                             </div>
                             <ul className="product-details">
+                                <li className='detItem'>
+
+                                    <div className="detItemHead">
+                                        {product.brand}
+                                    </div>
+                                    <div className="detItemFooter">
+                                        {product.title}
+                                    </div>
+                                </li>
                                 <li className='detItem'>
                                     <div className="detItemHead">
                                         Color
@@ -64,7 +73,7 @@ const MyShopPage = () => {
                                 </li>
                                 <li className='detItem'>
                                     <div className="detItemHead">
-                                        Total Price
+                                        Total
                                     </div>
                                     <div className="detItemFooter">
                                         {product.price * product.productCount} LE

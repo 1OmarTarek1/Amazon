@@ -9,12 +9,13 @@
     gap: 10px;
 }
 .product-info {
-    flex: 1 100%;
+    flex: 0 100%;
+    min-width: 575px;
     display: flex;
     flex-wrap: wrap;
-    /* align-items: center; */
-    gap: 20px;
-    padding: 10px;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 7px;
     background-color: var(--bg-component);
     box-shadow: var(--mainShadow);
     border: 1px solid var(--color-borderLight);
@@ -22,20 +23,22 @@
 }
 
 .product-image {
-    max-width: 150px;
+    width: 110px;
+    height: auto;
     border: 1px solid #ccc;
     border-radius: 3px;
 }
 .prodTitle{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .product-details {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    padding: 15px;
 }
 
 .product-details{
@@ -44,19 +47,64 @@
     justify-content: space-between;
 }
 .detItem{
+    flex: 1;
     display: flex;
     flex-direction: column;
+    /* align-items: center; */
     justify-content: space-between;
+    gap: 15px;
 }
-
-.product-details h2 {
-    margin: 0;
-    padding: 0;
-    font-size: 20px;
+.detItemHead{
+    font-size: 16px;
+    font-weight: 600;
+}
+.detItemFooter{
+    font-size: 14px;
+    color: var(--font-secondaryColor);
 }
 
 .product-details p {
     margin: 0;
     padding: 0;
     font-size: 16px;
+}
+
+
+.total-price{
+    width: 100%;
+    padding: 25px 30px;
+    margin-top: 30px;
+    background-color: var(--bg-component);
+    border-radius: 10px;
+    border: 1px solid var(--color-primary);
+    box-shadow: var(--mainShadow);
+}
+.total-price h2{
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+    .product-info {
+        flex: 0 49%;
+        min-width: unset;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 7px;
+    }
+    .product-image {
+        width: 100%;
+        border-radius: 3px 3px 0px 0px;
+    }
+    .product-details{
+        justify-content: flex-start;
+        padding: 5px;
+        gap: 25px 5px;
+    }
+    .detItem{
+        flex: 0;
+        min-width: 65px;
+        gap: 0px;
+    }
 }
